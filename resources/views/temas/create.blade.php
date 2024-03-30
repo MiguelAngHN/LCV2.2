@@ -8,17 +8,31 @@
 
     @csrf
     <label>
-        Nombre:
+        Nombre del tema:
         <br>
         <input type="text" name="nombre_tema" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
-   
+    <label>
+        Descripción:
+        <br>
+        <input type="text" name="descripcion" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
+    </label><br>
+    <label>
+        Url de la imagen:
+        <br>
+        <input type="text" name="url_imagen" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
+    </label><br>
+    <label>
+        Seccion_id:
+        <br>
+        <input type="text" name="seccion_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
+    </label><br>
+    <label>
+        Multimedia_id:
+        <br>
+        <input type="text" name="multimedia_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
+    </label>
         
-        
-    <br><br>
-
-    
-    
     <br><br>
     <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
 

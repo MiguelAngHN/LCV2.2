@@ -48,7 +48,7 @@
   .Introduccion1 img {
     width: 40%;
     margin: 0 0 0 10px;
-    border-radius: 50px;
+    border-radius: 200px 110px 180px 150px;
   }
   .Introduccion2 {
     display: flex;
@@ -67,14 +67,12 @@
   }
   @media (max-width: 1200px){
     .Introduccion1 ,.Introduccion2{
-      background-color: #6dc33b;
       flex-wrap: nowrap;
   }
   }
   @media (max-width: 991px){
    .Introduccion1 ,.Introduccion2{
     flex-wrap: wrap;
-    background-color: #055584;
    }
   }
   @media (min-width: 1200px){
@@ -169,72 +167,6 @@
     font-size: 16px;
     color: #fff;
   }
-  /* ----------------------------------------NAV */
-  .navbar.bg-body-tertiary {
-    background-color: rgba(0, 0, 0, 0) !important;
-    margin: 5px 0;  
-  }
-  .container-fluid{
-    background-color: #38b6ff;
-    border-radius: 10px;
-    padding: 2px;
-    border: 2px solid transparent;
-    animation: borderChange 4s infinite;
-  }
-  .container-fluid li{
-    font-family: Comic Sans MS;
-    color: #fff;
-  }
-  .container-fluid a{
-    color: #fff;
-  }
-  .container-fluid .navbar-toggler{
-    border: 1px solid rgba(0, 0, 0, 0.505);
-    background-color: #7ed957;
-  }
-  .container-fluid .dropdown-menu{
-    margin: 0 auto;
-    background-color: #169cea;
-    border: 2px solid transparent;
-    animation: borderChange 5s infinite;
-  }
-  @keyframes borderChange {
-    0% {
-      border-color: #ff5c5c; /* Color inicial del borde */
-    }
-  
-    25% {
-      border-color: #fedc1d; /* Cambio de color al 25% de la animación */
-    }
-  
-    50% {
-      border-color: #5eff5e; /* Cambio de color al 50% de la animación */
-    }
-  
-    75% {
-      border-color: #50ffd6; /* Cambio de color al 75% de la animación */
-    }
-  
-    100% {
-      border-color: #ff5c5c; /* Vuelve al color inicial al final de la animación */
-    }
-  }
-  .container-fluid .dropdown-menu a:hover{
-    background-color: #6dc9ff;
-  }
-  .container-fluid .navbar-nav{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  @media (max-width: 991px){
-    .container-fluid .dropdown-menu{
-     background-color: #1193de73;
-    }
-    .container-fluid .dropdown-menu a:hover{
-      background-color: #6dc9ff;
-    }
-   }
   #go-to-top {
       position: fixed;
       bottom: 20px;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\seccion;
 use App\Models\multimedia;
+use App\Models\tema;
 use Illuminate\Support\Facades\Http;
 
 class SeccionController extends Controller

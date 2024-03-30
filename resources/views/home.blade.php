@@ -1,6 +1,6 @@
 @extends('layouts.hmf')
 
-@section('title', 'Learn Cartoon Home')
+@section('title', 'Learn Cartoon / Home')
 
 @section('content')
 

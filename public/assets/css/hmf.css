@@ -65,6 +65,9 @@ body {
 .navbar.bg-body-tertiary {
     background-color: rgba(0, 0, 0, 0) !important;
     margin: 5px 0;  
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
   .container-fluid{
     background-color: #38b6ff;
@@ -83,6 +86,7 @@ body {
   .container-fluid .navbar-toggler{
     border: 1px solid rgba(0, 0, 0, 0.505);
     background-color: #7ed957;
+    margin: 2px;
   }
   .container-fluid .dropdown-menu{
     margin: 0 auto;
@@ -92,23 +96,23 @@ body {
   }
   @keyframes borderChange {
     0% {
-      border-color: #ff5c5c; /* Color inicial del borde */
+      border-color: #ff5c5c;
     }
   
     25% {
-      border-color: #fedc1d; /* Cambio de color al 25% de la animación */
+      border-color: #fedc1d;
     }
   
     50% {
-      border-color: #5eff5e; /* Cambio de color al 50% de la animación */
+      border-color: #5eff5e;
     }
   
     75% {
-      border-color: #50ffd6; /* Cambio de color al 75% de la animación */
+      border-color: #50ffd6;
     }
   
     100% {
-      border-color: #ff5c5c; /* Vuelve al color inicial al final de la animación */
+      border-color: #ff5c5c;
     }
   }
   .container-fluid .dropdown-menu a:hover{
@@ -127,7 +131,20 @@ body {
       background-color: #6dc9ff;
     }
    }
-   /* ---------------------------------------- */
+   .authNav{
+    border-left: 2px solid rgb(0, 0, 0, 0.4);
+    font-family: Comic Sans MS;
+    padding: 0 0 0 10px;
+   }
+   .authNav button{
+    background-color: #7ed957;
+    color: #fff;
+    margin: 0 2px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+   }
+   .authNav button:hover{
+    background-color: #5eb838;
+   }
 /*--------------------- Footer -------------------- */
 footer{
     padding-top: 150px;
@@ -199,8 +216,6 @@ footer{
     font-size: 10px;
     padding: 20px;
   }
-
-  /* ------------------------------------- */
 
 /* -----------Estilos secciones--------- */
 

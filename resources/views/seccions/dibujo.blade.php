@@ -1,6 +1,6 @@
 @extends('layouts.platillaSeccions')
 
-@section('title', 'LC/Secciones/Dibujo')
+@section('title', 'Learn Cartoon / Secciones/Dibujo')
 @section('nombreSeccion', 'Dibujo')
 
 
@@ -16,8 +16,11 @@
     </div>
     <div class="InicioInfo">
         <p>Aquí puedes empezar a divertirte dándole color en el lienzo, a tu
-            personaje que seleccionaste.
+            personaje que seleccionaste o también cambiar tu boceto.
         </p>
+        <button style="background-color: #7ED957; border-radius: 20px;" class="p-2 m-2">
+            <a style="text-decoration: none; color: black;" href="{{route('bocetos.index')}}">Escojer boceto</a>
+        </button>
     </div>
 </div>
 <hr noshade="" class="HR5">

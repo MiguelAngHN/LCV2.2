@@ -37,7 +37,7 @@
       </div>
       </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -51,66 +51,35 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="Index.html">INICIO</a>
-              </li> --}}
-  
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="Registro.html"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  REGISTRO
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="{{route('usuarios.create')}}">Registrarme</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href=""
-                      >Iniciar Sesión</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="">Recuperar Contraseña</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="">Cerrar Sesión</a>
-                  </li>
-  
-                </ul>
-              </li>
-  
               <li class="nav-item">
-                <a class="nav-link" href="">USUARIO LC</a>
+                <a class="nav-link" href="{{route('home')}}">Inicio</a>
               </li>
+  
+              {{-- <li class="nav-item">
+                <a class="nav-link" href="">USUARIO LC</a>
+              </li> --}}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="PagSecciones.html"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  SECCIONES
+                  aria-expanded="false">
+                  Secciones
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.home')}}"
-                      >INTRODUCCIÓN</a>
+                    <a class="dropdown-item" href="{{route('seccions.index')}}">Introducción</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.numeros')}}">Números</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.lyp')}}"
-                      >Letras y palabras</a
-                    >
+                    <a class="dropdown-item" href="{{route('seccions.lyp')}}">Letras y palabras</a>
                   </li>
                   <!-- <li><hr class="dropdown-divider"></li> -->
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.bocetos')}}">Bocetos</a>
+                    <a class="dropdown-item" href="{{route('bocetos.index')}}">Bocetos</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.dibujo')}}">Dibujo</a>
@@ -120,27 +89,28 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="SobreNos.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  SOBRE NOSOTROS
+                  Sobre nosotros
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="SobreNos.html"
-                      >Quienes somos</a>
+                    <a class="dropdown-item" href="">Quienes somos</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="Mision.html"
-                      >Misión y Visión</a>
+                    <a class="dropdown-item" href="">Misión y Visión</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Contactenos.html">CONTACTENOS</a>
+                <a class="nav-link" href="">Contactenos</a>
               </li>
             </ul>
+          </div>
+          <div class="authNav d-flex justify-content-end">
+            <button class="btn"><a class="text-decoration-none" href="{{route('usuarios.create')}}">Registrarme</a></button>
+            <button class="btn"><a class="text-decoration-none" href="">Iniciar Sesión</a></button>
           </div>
         </div>
       </nav>

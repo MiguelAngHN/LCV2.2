@@ -8,17 +8,21 @@
     <table id="idPqrsd" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Id seccion</th>
-                <th>nombre_tema</th>
-                <th>Detalle</th>
-                <th>Eliminar</th>
+              <th>Nombre del tema</th>
+              <th>Descripción</th>
+              <th>Url de Imagen</th>
+              <th>Id seccion</th>
+              <th>Id multimedia</th>
             </tr>
         </thead>
         <tbody>
           @foreach ($temas  as $tema)
               <tr>
-                  <td>{{$tema->id}}</td>
-                  <td>{{$tema->nombre_tema}}</td>
+                <td>{{$tema->nombre_tema}}</td>
+                <td>{{$tema->descripcion}}</td>
+                <td>{{$tema->url_imagen}}</td>
+                <td>{{$tema->seccion_id}}</td>
+                <td>{{$tema->multimedia_id}}</td>
                   
                   
                   <td><a href="{{route('tema.show',$tema->id)}}">Detalle</a></td>

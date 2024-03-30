@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use App\Http\Controllers\SesionController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\UsuarioController;
@@ -9,7 +10,9 @@ use App\Http\Controllers\SeccionController;
 use App\Http\Controllers\TemaController;
 use App\Http\Controllers\TipoController;
 use App\Http\Controllers\ActividadController;
+use App\Http\Controllers\BocetoController;
 use App\Http\Controllers\MultimediaController;
+use App\Models\tema;
 
 Route::get('/', function(){
     return view('home');
@@ -25,7 +28,7 @@ Route::get('usuarios/{usuario}', [UsuarioController::class, 'show'])->name('usua
 
 Route::get('temas', [TemaController::class, 'index'])->name('temas.index');
 Route::post('temas', [TemaController::class, 'store'])->name('temas.store');
-Route::get('temas/create', [TemaController::class, 'create']);
+Route::get('temas/create', [TemaController::class, 'create'])->name('temas.create');
 Route::delete('tema/{tema}', [TemaController::class, 'destroy'])->name('tema.destroy');
 Route::get('temas/{tema}', [TemaController::class, 'show'])->name('tema.show');
 
@@ -53,9 +56,7 @@ Route::get('multimedias/create', [MultimediaController::class, 'create'])->name(
 Route::delete('multimedia/{multimedia}', [MultimediaController::class, 'destroy'])->name('multimedia.destroy');
 Route::get('multimedias/{multimedia}', [MultimediaController::class, 'show'])->name('multimedia.show');
 
-Route::get('seccions1', function(){
-    return view('seccions.home');
-})->name('seccions.home');
+View::share('seccions_temas', tema::all());
 
 Route::get('seccions-Números', function(){
     return view('seccions.numeros');
@@ -65,10 +66,31 @@ Route::get('seccions-Letras y palabras', function(){
     return view('seccions.letrasypalabras');
 })->name('seccions.lyp');
 
-Route::get('seccions-Bocetos', function(){
-    return view('seccions.bocetos');
-})->name('seccions.bocetos');
-
 Route::get('seccions-Dibujo', function(){
     return view('seccions.dibujo');
 })->name('seccions.dibujo');
+Route::get('login', function () {
+    return view('usuarios.login');
+})->name('login');
+
+Route::get('sobre nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');
+
+Route::get('misión y visión', function () {
+    return view('misionYvision');
+})->name('misionYvision');
+
+Route::get('Contactenos', function () {
+    return view('contactenos');
+})->name('contactenos');
+
+Route::get('Perfil', function (){
+    return view('usuarios.home');
+})->name('perfil');
+
+Route::get('bocetos', [BocetoController::class, 'index'])->name('bocetos.index');
+Route::post('bocetos', [BocetoController::class, 'store'])->name('bocetos.store');
+Route::get('bocetos/create', [BocetoController::class, 'create'])->name('bocetos.create');
+Route::delete('bocetos/{boceto}', [BocetoController::class, 'destroy'])->name('bocetos.destroy');
+Route::get('bocetos/{boceto}', [BocetoController::class, 'show'])->name('bocetos.show');

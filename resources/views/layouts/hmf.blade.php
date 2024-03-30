@@ -5,26 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') - Web </title>
-    <link rel="icon" href="{{asset('	/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}"/>
+    <link rel="icon" href="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Login.css') }}">
     <script
       src="https://kit.fontawesome.com/5191364857.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 
     <!-- MenuNav / Carrousel----------- -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -50,66 +48,33 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="Index.html">INICIO</a>
-              </li> --}}
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('home')}}">Inicio</a>
+              </li>
   
+              {{-- <li class="nav-item">
+                <a class="nav-link" href="">USUARIO LC</a>
+              </li> --}}
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="Registro.html"
+                <a class="nav-link dropdown-toggle"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  REGISTRO
+                  Secciones
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="{{route('usuarios.create')}}">Registrarme</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href=""
-                      >Iniciar Sesión</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="">Recuperar Contraseña</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="">Cerrar Sesión</a>
-                  </li>
-  
-                </ul>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="">USUARIO LC</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="PagSecciones.html"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  SECCIONES
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="{{route('seccions.home')}}"
-                      >INTRODUCCIÓN</a>
+                    <a class="dropdown-item" href="{{route('seccions.index')}}">Introducción</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.numeros')}}">Números</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.lyp')}}"
-                      >Letras y palabras</a
-                    >
+                    <a class="dropdown-item" href="{{route('seccions.lyp')}}">Letras y palabras</a>
                   </li>
                   <!-- <li><hr class="dropdown-divider"></li> -->
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.bocetos')}}">Bocetos</a>
+                    <a class="dropdown-item" href="{{route('bocetos.index')}}">Bocetos</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.dibujo')}}">Dibujo</a>
@@ -119,27 +84,28 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="SobreNos.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  SOBRE NOSOTROS
+                  Sobre nosotros
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="SobreNos.html"
-                      >Quienes somos</a>
+                    <a class="dropdown-item" href="{{route('nosotros')}}">Quienes somos</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="Mision.html"
-                      >Misión y Visión</a>
+                    <a class="dropdown-item" href="{{route('misionYvision')}}">Misión y Visión</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Contactenos.html">CONTACTENOS</a>
+                <a class="nav-link" href="{{route('contactenos')}}">Contactenos</a>
               </li>
             </ul>
+          </div>
+          <div class="authNav d-flex justify-content-end">
+            <button class="btn"><a class="text-decoration-none" href="{{route('usuarios.create')}}">Registrarme</a></button>
+            <button class="btn"><a class="text-decoration-none" href="">Iniciar Sesión</a></button>
           </div>
         </div>
       </nav>

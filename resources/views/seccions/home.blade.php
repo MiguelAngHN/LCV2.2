@@ -1,6 +1,6 @@
 @extends('layouts.hmf')
 
-@section('title', 'LC/Secciones')
+@section('title', 'Learn Cartoon / Secciones')
 
 @section('content')
 
@@ -9,7 +9,6 @@
     <p id="fecha-actual"></p>
     <script src="{{ asset ('assets/js/Current Date.js') }}"></script>
 </div>
-
 
 {{-- <table>
     <thead>
@@ -28,12 +27,11 @@
     </tbody>
 </table> --}}
 
-
 <div class="InfoSecciones">
     <div class="Secciones">
-        <a href="PagNumeros.html">
+        <a href="{{route('seccions.numeros')}}">
             {{-- @foreach ($multimedias as $multimedia) --}}
-            <img src="{{ asset('/storage/imagenes/jhc2jAyKnweIYML39nYtAi1mPnezIzFWf5kxexov.webp	') }}" alt="Gif de Números">
+            <img src="{{ asset('/storage/imagenes/h1z3Z1kadlKPUZTUO0fROSPFjTLNE2TyIhYFv4uC.gif') }}" alt="Gif de Números">
             {{-- @endforeach --}}
         </a>
         <p>Te gustan los números, aprende con ellos. Te brindamos
@@ -46,10 +44,12 @@
         <p>Puedes distraerte, aprender y divertirte escribiendo
             como también puedes formar palabras. Conoscan sus emociones, aprendan
         más conocimientos y alimenten su imaginación.</p>
-        <a href="PagLyP.html"><img src="{{ asset('assets/images/Letras-Seccion.gif') }}" alt="Gif de Letras"></a>
+        <a href="{{route('seccions.lyp')}}">
+            <img src="{{ asset('/storage/imagenes/TS8RPMo1N5fHE85UfOCV0trPeHIXdt8QpuM9tySG.gif') }}" alt="Gif de Letras"></a>
     </div>
     <div class="Secciones3">
-        <a href="PagDibujo.html"><img src="{{ asset('assets/images/Anime.gif') }}" alt="Gif de anime"></a>
+        <a href="{{route('seccions.dibujo')}}">
+            <img src="{{ asset('/storage/imagenes/w0pTyA246tcQzU3khaPRbJV49GTQs08bjZjRIuSc.gif') }}" alt="Gif de anime"></a>
         <p>Dibuja, colorea personajes de anime y animaciones.🌈 Lo mejor es
             que puedes interarctuar con ellos navegando por las
             secciones. Elige el que mas te guste y a PINTAR. 🖌️

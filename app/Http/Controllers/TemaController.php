@@ -26,8 +26,9 @@ class TemaController extends Controller
         // $request->file('urlPdf')->storeAs('public/imagenes', $nombreArchivo );
         // $usuario->urlPdf = $nombreArchivo;
         $tema->save();
+        $temas = tema::all();
         
-        return redirect()->route('temas.index');
+        return redirect()->route('temas.index', compact('temas'));
         // return view('usuarios.show', compact('usuario'));
     }
     public function show(tema $tema){
