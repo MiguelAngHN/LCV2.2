@@ -37,7 +37,7 @@
               <img src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" width="48" alt="imagen prueba" style="border-radius: 60px;">
             </div>
             
-            <h2 class="fw-bold text-center py-5">Iniciar Sesión</h2>
+            <h2 class="fw-bold text-center py-5">Iniciar Sesión 2</h2>
             <!-- login -->
             <form action="#">
               <div class="mb-4">

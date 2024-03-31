@@ -12,6 +12,8 @@ use App\Http\Controllers\TipoController;
 use App\Http\Controllers\ActividadController;
 use App\Http\Controllers\BocetoController;
 use App\Http\Controllers\MultimediaController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RegisterController;
 use App\Models\tema;
 
 Route::get('/', function(){
@@ -69,9 +71,6 @@ Route::get('seccions-Letras y palabras', function(){
 Route::get('seccions-Dibujo', function(){
     return view('seccions.dibujo');
 })->name('seccions.dibujo');
-Route::get('login', function () {
-    return view('usuarios.login');
-})->name('login');
 
 Route::get('sobre nosotros', function () {
     return view('nosotros');
@@ -94,3 +93,11 @@ Route::post('bocetos', [BocetoController::class, 'store'])->name('bocetos.store'
 Route::get('bocetos/create', [BocetoController::class, 'create'])->name('bocetos.create');
 Route::delete('bocetos/{boceto}', [BocetoController::class, 'destroy'])->name('bocetos.destroy');
 Route::get('bocetos/{boceto}', [BocetoController::class, 'show'])->name('bocetos.show');
+
+
+Route::get('login', [SessionController::class, 'create'])->name('login.index');
+Route::post('login', [SessionController::class, 'store'])->name('login.store');
+Route::get('login/destroy', [SessionController::class, 'destroy'])->name('login.destroy');
+
+Route::get('register', [RegisterController::class, 'create'])->name('register.index');
+Route::post('register', [RegisterController::class, 'store'])->name('register.store');

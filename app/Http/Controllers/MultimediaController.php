@@ -43,6 +43,13 @@ class MultimediaController extends Controller
     }
 
     public function destroy(multimedia $multimedia){
+
+    $url = $multimedia->url;
+
+    $rutaUrl = str_replace('/storage', 'public', $url);
+        Storage::delete($rutaUrl);
+
+
         $multimedia->delete();
         return redirect()->route('multimedias.index');
     }

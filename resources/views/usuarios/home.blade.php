@@ -12,11 +12,12 @@
      <div class="col text-center">
       <!-- card de foto de perfil -->
       <div class="card border-0 " style="width: 18rem;">
-       <img src="https://th.bing.com/th/id/OIP.4tNpv-M4gDRxAYWlrqlsUQHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top rounded-circle" alt="foto de perfil">
+       {{-- <img src="https://th.bing.com/th/id/OIP.4tNpv-M4gDRxAYWlrqlsUQHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top rounded-circle" alt="foto de perfil"> --}}
+       <img src="{{asset('/storage/imagenes/ltTtQrnUDJI6bqMiSZf5qBcyXRexeBCyWhLdsqUo.webp')}}" class="card-img-top rounded-circle" alt="foto de perfil">
        <div class="d-grid gap-2">
          <h5 class="card-title">Foto de perfil</h5>
-         <p>UserLC</p>
-         <a href="#" class="btn btn-primary">Subir</a>
+         <p>{{auth()->user()->nombre_usuario}}</p>
+         <a href="#" class="btn btn-primary m-2">Subir</a>
        </div>
      </div>
      </div>
@@ -35,7 +36,7 @@
            <form action="#" class=" text-start">
              <div class="mb-3">
                <!-- <label for="name" class="form-label">Nombre:</label> -->
-               <input type="name" class="form-control" name="name" placeholder="Nombre"/>
+               <input type="name" class="form-control" name="nombre_usuario" placeholder="Nombre usuario"/>
                
              </input>
              </div>

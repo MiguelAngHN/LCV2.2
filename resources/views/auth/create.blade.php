@@ -37,31 +37,42 @@
               <img src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" width="48" alt="imagen prueba" style="border-radius: 60px;">
             </div>
             
-            <h2 class="fw-bold text-center py-5">Registrarse 2</h2>
+            <h2 class="fw-bold text-center py-5">Registrarse en Learn Cartoon</h2>
             <!--Formulario login -->
 
-            <form action="{{route('usuarios.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('register.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
               <div class="mb-4">
                 <label for="email" class="form-label">Nombre de usuario:</label>
-                <input type="text" class="form-control" name="nombre_usuario" />
+                <input type="text" class="form-control" name="nombre_usuario" required/>
               </div>
-  
+              @error('nombre_usuario')
+              <p class="text-bg-danger p-3">{{$message}}*</p>
+              @enderror
               <div class="mb-4">
                 <label for="email" class="form-label">Correo:</label>
-                <input type="email" class="form-control" name="email" />
+                <input type="email" class="form-control" name="email"  required/>
               </div>
+              @error('email')
+              <p class="text-bg-danger p-3">{{$message}}*</p>
+              @enderror
               <div class="mb-4">
                 <label for="password" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" name="password" />
+                <input type="password" class="form-control" name="password"  required/>
               </div>
+              @error('password')
+              <p class="text-bg-danger p-3">{{$message}}*</p>
+              @enderror
               <div class="mb-4">
                 <label for="password" class="form-label">Rol:</label>
-                <input type="text" class="form-control" name="rol" />
+                <input type="text" class="form-control" name="rol" required/>
               </div>
+              @error('rol')
+              <p class="text-bg-danger p-3">{{$message}}*</p>
+              @enderror
   
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn" style="background-color: #38b6ff;">
                   Registrar
                 </button>
               </div>
@@ -71,12 +82,12 @@
   
             <!-- redes sociales login -->
             <div class="container w-100 my-5">
-              <div class="row text-center border">
-                <div class="col-12">Registrar con:</div>
+              <div class="row text-center">
+                <div class="col-12">También con:</div>
               </div>
               <div class="row">
                 <div class="col">
-                  <button class="btn btn-outline-primary w-100 my-1">
+                  <button class="btn w-100 my-1" style="border: solid #38b6ff;">
                     <div class="row align-items-center">
                       <div class="col-2 d-none d-md-block">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -94,7 +105,7 @@
                   </button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-outline-primary w-100 my-1">
+                  <button class="btn w-100 my-1" style="border: solid #38b6ff;">
                     <div class="row align-items-center">
                       <div class="col-2 d-none d-md-block">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
@@ -105,15 +116,11 @@
                       <div class="col-10 text-center">
                         Google
                       </div>
-  
                     </div>
-  
-  
-  
                   </button>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>

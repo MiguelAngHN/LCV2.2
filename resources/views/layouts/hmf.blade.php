@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') - Web </title>
-    <link rel="icon" href="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}"/>
+    <link rel="icon" href="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/Login.css') }}">
@@ -27,7 +27,7 @@
   <body>
 
     <header class="header">
-        <img class="logo" src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" alt="Logo Learn Cartoon"/>
+        <a href="{{route('home')}}"><img class="logo" src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" alt="Logo Learn Cartoon"/></a>
         <div class="TituloLema">
         <h1 class="Titulo-Cabecera">Learn Cartoon</h1>
         <h2 class="Subtitulo-Cabecera">Pasos de hoy, caminos del mañana</h2>
@@ -104,9 +104,15 @@
             </ul>
           </div>
           <div class="authNav d-flex justify-content-end">
-            <button class="btn"><a class="text-decoration-none" href="{{route('usuarios.create')}}">Registrarme</a></button>
-            <button class="btn"><a class="text-decoration-none" href="">Iniciar Sesión</a></button>
-          </div>
+
+          @if (auth()->check())
+          <a class="nav-link p-2" aria-current="page" href="{{route('perfil')}}"><b>{{auth()->user()->nombre_usuario}}</b></a>
+          <button class="btn bg-danger"><a class="text-decoration-none" href="{{route('login.destroy')}}">Cerrar sesión</a></button>
+          @else
+            <button class="btn"><a class="text-decoration-none" href="{{route('register.index')}}">Registrarme</a></button>
+            <button class="btn"><a class="text-decoration-none" href="{{route('login.index')}}">Iniciar Sesión</a></button>
+          @endif          
+        </div>
         </div>
       </nav>
 

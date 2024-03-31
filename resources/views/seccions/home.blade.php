@@ -10,23 +10,6 @@
     <script src="{{ asset ('assets/js/Current Date.js') }}"></script>
 </div>
 
-{{-- <table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($data as $cliente)
-            <tr>
-                <td>{{$cliente['name']}}</td>
-                <td>{{$cliente['email']}}</td>
-            </tr>
-        @endforeach
-    </tbody>
-</table> --}}
-
 <div class="InfoSecciones">
     <div class="Secciones">
         <a href="{{route('seccions.numeros')}}">
