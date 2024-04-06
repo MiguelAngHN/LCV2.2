@@ -43,20 +43,20 @@
             <form action="{{route('usuarios.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
               <div class="mb-4">
-                <label for="email" class="form-label">Nombre de usuario:</label>
+                <label class="form-label">Nombre de usuario:</label>
                 <input type="text" class="form-control" name="nombre_usuario" />
               </div>
   
               <div class="mb-4">
-                <label for="email" class="form-label">Correo:</label>
+                <label class="form-label">Correo:</label>
                 <input type="email" class="form-control" name="email" />
               </div>
               <div class="mb-4">
-                <label for="password" class="form-label">Contraseña:</label>
+                <label class="form-label">Contraseña:</label>
                 <input type="password" class="form-control" name="password" />
               </div>
               <div class="mb-4">
-                <label for="password" class="form-label">Rol:</label>
+                <label class="form-label">Rol:</label>
                 <input type="text" class="form-control" name="rol" />
               </div>
   

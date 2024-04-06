@@ -12,19 +12,6 @@
 
 <div class="container">
     <div class="row">
-        {{-- <div class="col">
-
-            <div class="card-columns">
-
-                @foreach ($multimedias as $multimedia)
-                    <div class="card">
-                        <img class="card-img-top" src="{{asset($multimedia->url)}}" alt="">
-                    </div>
-                @endforeach
-
-            </div>
-
-        </div> --}}
 
         @foreach ($multimedias as $multimedia)
             <div class="col-4">

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_boceto');  
             $table->string('url');
-            $table->unsignedBigInteger('multimedia_id')->nullable();
-            $table->foreign('multimedia_id')->references('id')->on('multimedia')->onDelete('cascade')->onUpdate('cascade');  
+            // $table->unsignedBigInteger('multimedia_id')->nullable();
+            // $table->foreign('multimedia_id')->references('id')->on('multimedia')->onDelete('cascade')->onUpdate('cascade');  
             $table->timestamps();
         });
     }

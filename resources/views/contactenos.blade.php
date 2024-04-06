@@ -24,7 +24,7 @@
       <div class="col bg-white rounded-end">
 
         <div class="text-end d-none d-md-block">
-          <img src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" width="48" alt="imagen prueba" style="border-radius: 60px;">
+          <img src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" width="48" alt="Imagen logo contactenos" style="border-radius: 60px;">
         </div>
         
         <h2 class="fw-bold text-center py-5">Contactenos</h2>
@@ -56,7 +56,7 @@
           </div>
 
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn" style="background-color: #38b6ff;">
               Enviar
             </button>
           </div>

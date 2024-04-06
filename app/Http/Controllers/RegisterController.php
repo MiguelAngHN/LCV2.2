@@ -26,5 +26,12 @@ class RegisterController extends Controller
         return redirect()->to('/');
     }
 
+    public function show(){
+        
+        $usuarios =  usuario::orderBy('id', 'desc')->get();
+       
+        return view('usuarios.listarusuario', compact('usuarios'));
+     }
+
     
 }

@@ -14,7 +14,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="{{asset('/storage/imagenes/xaNY17IMmn98ICnGPo8wfDin7L5FyNa496uqu0xs.webp')}}"
+              src="{{asset('/storage/imagenes/P5PpPVl603JRfMhbqEBgVZqSH0f1Ftochpw6Vnnm.webp')}}"
               class="d-block w-100"
               alt="Banner 1"
             />
@@ -40,7 +40,7 @@
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="prev">
           <span
-            class="carousel-control-prev-icon"
+            class="carousel-control-prev-icon text-bg-primary"
             aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
@@ -50,16 +50,17 @@
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="next">
           <span
-            class="carousel-control-next-icon"
+            class="carousel-control-next-icon text-bg-primary"
             aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
+    </div><br>
+
 
     <!-- ----------------------------------------------- -->
     <section class="Introduccion1">
-      <img src="{{asset('/storage/imagenes/uM2vElvy07ATh2U8sk4L4r4Aef6fuyyLnFvDIAFZ.gif')}}" alt="Imagen de Goku">      
+      <img src="{{asset('/storage/imagenes/xG2r0aYnqjlZT9aAWbe7v1lLTXajTDxkDc07HoPx.gif')}}" alt="Imagen de Goku">      
       <p>
         Nos enfocamos en caracterisarnos por nuestro interes y compromiso al
         brindar nuestros servicios con secciones, cada una con niveles de
@@ -78,19 +79,19 @@
         habilidades y expandir su creatividad con los que evidencian con
         esta mundo tecnologico educativo desde cualquier lugar y momento.
       </p>
-      <img src="{{asset('/storage/imagenes/STTPtRNSw1Yk6EyOnNeHcKcctXnaQXNHrvL7dhps.gif')}}" alt="Imagen Educativa" />
+      <img src="{{asset('/storage/imagenes/si6Q4H3uR7mpRS2dx4iwkTV0lCaLbqlYpwq1CGeA.gif')}}" alt="Imagen Educativa" />
       </section>
 
     <main class="ContenidoAdicional">
       <section class="banner">
                   <h2>Contenido que te podría gustar</h2>
                   <p>Explora nuestro mundo interactivo lleno de juegos educativos y actividades emocionantes.</p>
-                  <a href="PagSecciones.html" class="cta-button">¡Comienza ahora!</a>
+                  <a href="{{route('seccions.index')}}" class="cta-button">¡Comienza ahora!</a>
                 </section>
                 
                 <section class="features">
                   <div class="feature">
-                    <a href="#"> <img src="{{asset('/storage/imagenes/vS33vsiAfjob1zTIVDnTyda9T1YXhg3OnrIk21vd.gif')}}" alt="Juegos"></a>
+                    <a href="#"> <img src="{{asset('assets/images/dibujo1.gif')}}" alt="Juegos"></a>
                     <h3> Colorea y pinta. 🎨</h3>
                     <p>Disfruta de usar tu imaginación. Todos los colores disponibles al uso 
                         que quieras.
@@ -98,7 +99,7 @@
                   </div>
                   
                   <div class="feature">
-                    <a href="#"><img src="{{asset('/storage/imagenes/5sREn4qXds62ZdNeyjoEfILSjz0xCZZnt3ShHAJY.gif')}}" alt="Actividades"></a>
+                    <a href="#"><img src="{{asset('assets/images/Bocetos1.gif')}}" alt="Actividades"></a>
                     <h3>Escoje a tu preferencia.</h3>
                     <p> Si deseas una guia no te preocupes tienes la ayuda necesaria para empezar 
                         tus pinturas.
@@ -106,7 +107,7 @@
                   </div>
                   
                   <div class="feature2">
-                    <a href="#"><img src="{{asset('/storage/imagenes/ntsEu5uzxJAUauaGySf6v2BGyiYgksn1SKBNXfYc.gif')}}" alt="Premios"></a>
+                    <a href="#"><img src="{{asset('/assets/images/Espacio.gif')}}" alt="Premios"></a>
                     <h3>Diviértete y aprende.</h3>
                     <p>Supera desafíos, recuerda que siempre hay seguir aprendiendo.</p>
                   </div>

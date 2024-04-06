@@ -152,7 +152,7 @@ body {
 /*--------------------- Footer -------------------- */
 footer{
     padding-top: 150px;
-    background-color: #38b6ff;
+    background-color: #fff;
   }
   .SVG {
     margin-top: -100px;
@@ -226,7 +226,7 @@ footer{
 .InfoSecciones {
     font-family: Comic Sans MS;
     font-size: 17px;
-    background-color: #38b6ff;
+    background-color: #fff;
     width: 100%;
     padding-top: 20px;
     margin: 15px 0 0 0;

@@ -8,10 +8,15 @@
 
     @csrf
     <label>
-        Nombre:
+        Nombre sección:
         <br>
         <input type="text" name="nombre_seccion" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
-    </label> 
+    </label>
+    <label>
+        Usuario id:
+        <br>
+        <input type="text" name="user_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
+    </label>  
         
     <br><br>
     

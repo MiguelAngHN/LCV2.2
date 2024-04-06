@@ -113,7 +113,7 @@
             <a class="nav-link p-2" aria-current="page" href="{{route('perfil')}}"><b>{{auth()->user()->nombre_usuario}}</b></a>
             <button class="btn bg-danger"><a class="text-decoration-none" href="{{route('login.destroy')}}">Cerrar sesión</a></button>
             @else
-              <button class="btn"><a class="text-decoration-none" href="{{route('register.index')}}">Registrarme</a></button>
+              <button class="btn"><a class="text-decoration-none" href="{{route('usuarios.create')}}">Registrarme</a></button>
               <button class="btn"><a class="text-decoration-none" href="{{route('login.index')}}">Iniciar Sesión</a></button>
             @endif  
           </div>

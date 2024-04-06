@@ -27,19 +27,14 @@
         <br>
         <input type="text" name="seccion_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label><br>
-    <label>
+    {{-- <label>
         Multimedia_id:
         <br>
         <input type="text" name="multimedia_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
-    </label>
+    </label> --}}
         
     <br><br>
     <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
-
-
-
-
-
 </form>
 
 @endsection

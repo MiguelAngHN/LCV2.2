@@ -20,8 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('seccion_id')->nullable();
             $table->foreign('seccion_id') ->references('id') ->on('seccions')->onDelete('cascade')->onUpdate('cascade');
             
-            $table->unsignedBigInteger('multimedia_id')->nullable();
-            $table->foreign('multimedia_id')->references('id')->on('multimedia')->onDelete('cascade')->onUpdate('cascade'); 
+            // $table->unsignedBigInteger('multimedia_id')->nullable();
+            // $table->foreign('multimedia_id')->references('id')->on('multimedia')->onDelete('cascade')->onUpdate('cascade'); 
 
             $table->timestamps();
            

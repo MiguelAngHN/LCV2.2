@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','listar multimedia')
+@section('title','Learn Cartoon / Multimedias')
 
 @section('content')
 
@@ -8,27 +8,23 @@
     <table id="idPqrsd" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Id multimedia</th>
-                <th>url</th>
+                {{-- <th>Id multimedia</th> --}}
+                <th>Url multimedia</th>
                 <th>Detalle</th>
                 <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
-          @foreach ($multimedias  as $multimedia)
+          @foreach ($data  as $multimedia)
               <tr>
-                  <td>{{$multimedia->id}}</td>
-                  <td>{{$multimedia->url}}</td>
+                  <td>{{$multimedia ['url']}}</td>
+                  <td><img src="{{env('URL_SERVER_API_PUBLIC') . '/' . $multimedia['url']}}" style="width: 20%; border-radius: 15px;"><br></td>
                   
-                  
-                  <td><a href="{{route('multimedia.show',$multimedia->id)}}">Detalle</a></td>
+                  <td><a href="{{ route('multimedia.view', $multimedia['id']) }}">Ver</a></td>
                  <td>
-                    <form method="post" action="{{route('multimedia.destroy',$multimedia->id)}}">
-                        @method('delete')
-                        @csrf
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
+                  <a href="{{ route('multimedia.delete', $multimedia['id']) }}">Eliminar</a>
                  </td>
+
                  
                   {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
     
@@ -50,36 +46,4 @@
     
     </div>
     
-@endsection
-
-@section('js')
-
-
-<script type="text/javascript">
-
-   $(document).ready(function() {
-    // $('#idPqrsd').DataTable();
-  
-    // Enable DataTables: https://datatables.net/examples/basic_init/
-    try {
-      if ($.fn.dataTable.isDataTable("#idPqrsd")) {
-        $("#idPqrsd").DataTable()
-      } else {
-        $("#idPqrsd").DataTable({
-          language: {
-            url:
-              "https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json",
-          },
-        })
-      }
-    } catch (error) {
-      console.log(
-        "Unable to add Filters to a table from this page - " + error.name
-      )
-    }
-
-
-} );
-</script>
-
 @endsection

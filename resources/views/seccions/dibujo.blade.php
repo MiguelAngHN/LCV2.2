@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="ImgDibujo">
-    <img src="{{{asset('/storage/imagenes/iE2WuHIxtYfGvnvI9tirQslHSRjkti38rEpa4oV0.gif')}}}" alt="Fondo de pintura">
+    <img src="{{{asset('/storage/imagenes/fYbk4dmfdwp4jzDmCcOnmjVUwwnSvHYZf9F6qWFb.gif')}}}" alt="Fondo de pintura">
 </div>
 <div class="InicioDibujo">
     <div class="InicioSeleccion">

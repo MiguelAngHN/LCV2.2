@@ -27,18 +27,29 @@ Route::post('usuarios', [UsuarioController::class, 'store'])->name('usuarios.sto
 Route::get('usuarios/create', [UsuarioController::class, 'create'])->name('usuarios.create');
 Route::delete('usuario/{usuario}', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
 Route::get('usuarios/{usuario}', [UsuarioController::class, 'show'])->name('usuario.show');
+Route::get('/usuario/{idUser}', [UsuarioController::class, 'view'])->name('usuario.view');
+Route::post('/usuario/update', [UsuarioController::class, 'update'])->name('usuario.update');
+Route::get('/usuario/delete/{id}', [UsuarioController::class, 'delete'])->name('usuario.delete');
 
 Route::get('temas', [TemaController::class, 'index'])->name('temas.index');
 Route::post('temas', [TemaController::class, 'store'])->name('temas.store');
 Route::get('temas/create', [TemaController::class, 'create'])->name('temas.create');
 Route::delete('tema/{tema}', [TemaController::class, 'destroy'])->name('tema.destroy');
 Route::get('temas/{tema}', [TemaController::class, 'show'])->name('tema.show');
+Route::get('/tema/{idTema}', [TemaController::class, 'view'])->name('tema.view');
+Route::post('/tema/update', [TemaController::class, 'update'])->name('tema.update');
+Route::get('/tema/delete/{id}', [TemaController::class, 'delete'])->name('tema.delete');
+
 
 Route::get('seccions', [SeccionController::class, 'index'])->name('seccions.index');
 Route::post('seccions', [SeccionController::class, 'store'])->name('seccions.store');
-Route::get('seccions/create', [SeccionController::class, 'create']);
+Route::get('seccions/create', [SeccionController::class, 'create'])->name('seccions.create');
 Route::delete('seccion/{seccion}', [SeccionController::class, 'destroy'])->name('seccion.destroy');
 Route::get('seccions/{seccion}', [SeccionController::class, 'show'])->name('seccion.show');
+Route::get('/seccion/{idSeccion}', [SeccionController::class, 'view'])->name('seccion.view');
+Route::post('/seccion/update', [SeccionController::class, 'update'])->name('seccion.update');
+Route::get('/seccion/delete/{id}', [SeccionController::class, 'delete'])->name('seccion.delete');
+
 
 Route::get('actividads', [ActividadController::class, 'index'])->name('actividads.index');
 Route::post('actividads', [ActividadController::class, 'store'])->name('actividads.store');
@@ -57,6 +68,10 @@ Route::post('multimedias', [MultimediaController::class, 'store'])->name('multim
 Route::get('multimedias/create', [MultimediaController::class, 'create'])->name('multimedias.create');
 Route::delete('multimedia/{multimedia}', [MultimediaController::class, 'destroy'])->name('multimedia.destroy');
 Route::get('multimedias/{multimedia}', [MultimediaController::class, 'show'])->name('multimedia.show');
+Route::get('/multimedia/{idMultimedia}', [MultimediaController::class, 'view'])->name('multimedia.view');
+Route::post('/multimedia/update', [MultimediaController::class, 'update'])->name('multimedia.update');
+Route::get('/multimedia/delete/{id}', [MultimediaController::class, 'delete'])->name('multimedia.delete');
+
 
 View::share('seccions_temas', tema::all());
 
@@ -91,8 +106,11 @@ Route::get('Perfil', function (){
 Route::get('bocetos', [BocetoController::class, 'index'])->name('bocetos.index');
 Route::post('bocetos', [BocetoController::class, 'store'])->name('bocetos.store');
 Route::get('bocetos/create', [BocetoController::class, 'create'])->name('bocetos.create');
-Route::delete('bocetos/{boceto}', [BocetoController::class, 'destroy'])->name('bocetos.destroy');
-Route::get('bocetos/{boceto}', [BocetoController::class, 'show'])->name('bocetos.show');
+Route::delete('boceto/{boceto}', [BocetoController::class, 'destroy'])->name('boceto.destroy');
+Route::get('bocetos/{boceto}', [BocetoController::class, 'show'])->name('boceto.show');
+Route::get('/boceto/{idBoceto}', [BocetoController::class, 'view'])->name('boceto.view');
+Route::post('/boceto/update', [BocetoController::class, 'update'])->name('boceto.update');
+Route::get('/boceto/delete/{id}', [BocetoController::class, 'delete'])->name('boceto.delete');
 
 
 Route::get('login', [SessionController::class, 'create'])->name('login.index');
@@ -101,3 +119,4 @@ Route::get('login/destroy', [SessionController::class, 'destroy'])->name('login.
 
 Route::get('register', [RegisterController::class, 'create'])->name('register.index');
 Route::post('register', [RegisterController::class, 'store'])->name('register.store');
+Route::get('registers/', [RegisterController::class, 'show'])->name('register.show');

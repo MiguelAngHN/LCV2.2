@@ -3,11 +3,11 @@
 @section('title', 'Learn Cartoon / Secciones/Números')
 @section('nombreSeccion', 'Números')
 @section('ImgSeccion')
-<img src="{{asset('/storage/imagenes/R3hkYTrjYIkJKLcC8MRLyrfNLqt2RZA6SrZnjG8y.gif')}}">
+<img src="{{asset('/storage/imagenes/1AStnmTWJ9nXluAEwVl114etipDYJPEYyisgNJ27.gif')}}">
 @endsection
 
 @section('prsSeccion')
-<img src="{{asset('/storage/imagenes/qDgnOEruUMEn6xVoftt3XxucXeNzdMFxPlURGfot.gif')}}">
+<img src="{{asset('/storage/imagenes/XAhsSCpbxdAxO0IFErMee7GkEXCJAYL2IucZaTPd.gif')}}">
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
       <p>En este nivel puedes aprenderte el sonido y recordar los números, para
         familiarizarte con ellos.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/y484u3qju6hV8QTikvLmKy32rMdN6xp68bjJTeqP.gif')}}">
+    <img src="{{asset('/storage/imagenes/bepDI9I37w7OfXMg7tyJ7chvDQr9FnWTBCrruOEB.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
@@ -28,7 +28,7 @@
       <p>Aprendete los números de manera ordenada, mejora su entendimiento, que puedan relacionar
         los números y las cantidades de manera cotidiana.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/y18ZJun0hu9KzVsYC5lgRvXicdRKdJoDXc8LEjPw.gif')}}">
+    <img src="{{asset('/storage/imagenes/2VJIiWMxh2qmFYZkBBTtdMabWG3LuYxTqEUm6RII.gif	')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
@@ -38,7 +38,7 @@
       <p>El desarrollo intelectual, logico y numerico es importante para tu vida.
       <br>Matematica basica para niños de 5 a 10 años.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/CsrsqA4228omi10LYrbbnObnAr4dxqj8hsgTVmtb.gif')}}">
+    <img src="{{asset('/storage/imagenes/H5kxQAEN3FVmirwEdmUDBuGbvY32VkcniDnVQDVw.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">

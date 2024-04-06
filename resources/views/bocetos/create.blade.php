@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bocetos create</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 
     @csrf
     <label>
-        Nombre:
+        Nombre boceto:
         <br>
         <input type="text" name="nombre_boceto" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label>
@@ -25,11 +25,11 @@
         <br>
         <input type="text" name="url" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label><br>
-    <label>
+    {{-- <label>
         Id multimedia:
         <br>
         <input type="text" name="multimedia_id" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
-    </label>
+    </label> --}}
     <br><br>
     <br><br>
     <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
@@ -37,6 +37,6 @@
 </form>
 
 
-    
+
 </body>
 </html>
