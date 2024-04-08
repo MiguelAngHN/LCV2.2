@@ -1,0 +1,270 @@
+/* estilos escuchar------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url(../images/paisaje.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .HeaderEscuchar {
+    background-color: rgb(225, 222, 32);
+    padding: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: Comic Sans MS;
+  }
+  .InicioEscuchar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Comic Sans MS;
+    font-size: 19px;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .InicioEscuchar p {
+    padding: 25px;
+  }
+  .InicioEscuchar img {
+    margin: 20px 6%;
+    width: 20%;
+    border-radius: 8%;
+  }
+  .ContenidoEscuchar {
+    display: flex;
+    border-bottom: 50px solid rgb(237, 237, 237);
+  }
+  .Presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    position: relative;
+    background-image: url(../images/ImgNumeros/Cielo1.webp);
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-top-right-radius: 50px;
+  }
+  .Presentacion h2 {
+    position: absolute;
+    top: 50px;
+    padding: 15px;
+    font-family: Comic Sans MS;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(235, 254, 22);
+  }
+  .Presentacion p {
+    position: absolute;
+    top: 180px;
+    padding: 15px;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    text-align: center;
+  }
+  .Presentacion img {
+    margin: 160px 0 0 0;
+    max-width: 50%;
+    width: 50%;
+    opacity: 0.88;
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+  }
+  @keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+  }
+  .AudioNumeros {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .AudioNumeros img {
+    width: 120px;
+  }
+  .Audios {
+    padding: 5px;
+    width: 250px;
+  }
+  /* Animacion al reproduccir audio */
+  .AnimacionPlay {
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #38b6ff;
+    margin: 5px 0;
+    border-radius: 10%;
+  }
+  .AnimacionPlay img {
+    transition: transform 0.2s ease-in-out;
+  }
+  .AnimacionPlay.play-animation img {
+    animation: scaleAnimation 0.6s;
+  }
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @media (max-width: 991px) {
+    .ContenidoEscuchar{
+      flex-direction: column;
+    }
+    .Presentacion{
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+    }
+    .Presentacion h2{
+      top: 30px;
+    }
+    .Presentacion p{
+      top: 120px;
+      font-size: 23px;
+    }
+    .Presentacion img{
+      width: 25%;
+      margin-top: 210px;
+    }
+    .AudioNumeros{
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px){
+    .Presentacion img{
+      width: 33%;
+      margin-top: 190px;
+    }
+  }
+  @media (max-width: 576px){
+    .AudioNumeros img{
+      width: 80px;
+    }
+    .Audios{
+      width: 180px;
+      padding: 8px;
+    }
+    .InicioEscuchar img{
+      display: none;
+    }
+    .Presentacion h2{
+      top: 15px;
+      font-size: 26px;
+    }
+    .Presentacion p{
+      top: 100px;
+    }
+  }
+  #contenedorOculto {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #btnMostrar {
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    background-color: #7ed957;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  .oculto {
+    display: none;
+  }
+  .TituloOculto {
+    width: 60%;
+    background-color:rgb(235, 254, 22);
+    font-family: Comic Sans MS;
+    font-size: 25px;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .contenedorEscuchar {
+    font-family: Comic Sans MS;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .audio-card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .audio-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .audio-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .audio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .audio-player {
+    margin-top: 20px;
+  }
+  .audio-player audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .AudioNumeros2 {
+    /* background-color: rgb(225, 244, 15); */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .AudioNumeros2 img {
+    width: 120px;
+  }
+  #go-to-top {
+    font-family: Comic Sans MS;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f5a623;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  #go-to-top.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #go-to-top a {
+    text-decoration: none;
+    color: #fff;
+  }

@@ -34,9 +34,9 @@
       
                   <div class="listado_oculto text-white">
                     <ul class=" justify-content-center">
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;">Escuchar</a></li>
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;">Contar</a></li>
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;">Matematicas</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('temas.index')}}" class="text-white" style="text-decoration: none;">Escuchar</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('temas.index')}}" class="text-white" style="text-decoration: none;">Contar</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('temas.index')}}" class="text-white" style="text-decoration: none;">Matematicas</a></li>
                     </ul>
                   </div>
                 </div>
@@ -59,9 +59,9 @@
                   </div>
                   <div class="listado_oculto bg-danger">
                     <ul>
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;"></a>Vocales</li>
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;"></a>Abecedario</li>
-                      <li class="lista_targeta my-3 p-2"><a href="#" class="text-white" style="text-decoration: none;"></a>Oraciones Completas</li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('seccions.lyp')}}" class="text-white" style="text-decoration: none;">Vocales</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('seccions.lyp')}}" class="text-white" style="text-decoration: none;">Abecedario</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('seccions.lyp')}}" class="text-white" style="text-decoration: none;">Oraciones Completas</a></li>
                     </ul>
                   </div>
                 </div>
@@ -84,8 +84,8 @@
                   </div>
                   <div class="listado_oculto bg-danger">
                     <ul>
-                      <li class="lista_targeta my-3 p-2">Dibujo</li>
-                      <li class="lista_targeta my-3 p-2">Bocetos</li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('bocetos.index')}}" class="text-white" style="text-decoration: none;">Bocetos</a></li>
+                      <li class="lista_targeta my-3 p-2"><a href="{{route('seccions.dibujo')}}" class="text-white" style="text-decoration: none;">Dibujo</a></li>
                     </ul>
                   </div>
                 </div>

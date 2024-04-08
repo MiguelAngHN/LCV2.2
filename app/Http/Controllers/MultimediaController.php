@@ -67,35 +67,33 @@ class MultimediaController extends Controller
         return view('multimedias.create');
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $request->validate([
-            'file' => 'required|image'
+            'file' => 'required|image', // ajusta las reglas según sea necesario
         ]);
     
         $file = $request->file('file');
     
+        // Asegúrate de que el archivo sea válido antes de enviarlo a la API
+    
+        // Obtener la URL de la API desde las variables de entorno
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
     
-        try {
-            $response = Http::attach(
-                'file',
-                file_get_contents($file->getRealPath()),
-                $file->getClientOriginalName()
-            )->post($url.'/multimedias');
+        $response = Http::attach(
+            'file', // Nombre del campo
+            file_get_contents($request->file('file')->path()), // Contenido del archivo
+            $request->file('file')->getClientOriginalName() // Nombre del archivo
+        )->post($url.'/multimedias');
     
-            if ($response->successful()) {
-                return dd('Hola1');
-                // return redirect()->route('multimedias.index')->with('success', 'La imagen se ha enviado correctamente.');
-            } else {
-                return dd('Hola2');
-                // return back()->with('error', 'No se pudo enviar la imagen a la API.');
-            }
-        } catch (\Exception $e) {
-            return dd('Hola3');
-            // return back()->with('error', 'Se produjo un error al enviar la imagen: ' . $e->getMessage());
-        }
-    }
+            // Verificar si la solicitud fue exitosa
+            // if ($response->status() == 200) {
+            //     return redirect()->route('multimedias.index');
+            // } else {
+            //     return dd('error', 'No se pudo enviar el archivo multimedia a la API.');
+            // }
+            return redirect()->to('/');
+    } 
+    
 
     //  public function store(Request $request){
 

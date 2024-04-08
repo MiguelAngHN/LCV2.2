@@ -87,6 +87,13 @@ class UsuarioController extends Controller
         return view('usuarios/view', compact('user'));
     }
 
+    public function profile($idUser){
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url.'/users/'.$idUser);
+        $user = $response->json();
+        return view('usuarios/view', compact('user'));
+    }
+
     public function show(){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url.'/users');

@@ -170,10 +170,7 @@
      <h1>tres</h1>
    </div>
  </div>
-
-
-
-
+</div>
 </div>
 
 <!-- estilo de cunta lc js -->

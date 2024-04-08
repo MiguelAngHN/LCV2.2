@@ -10,6 +10,7 @@
             <tr>
                 {{-- <th>Id multimedia</th> --}}
                 <th>Url multimedia</th>
+                <th>Img</th>
                 <th>Detalle</th>
                 <th>Eliminar</th>
             </tr>
@@ -18,7 +19,7 @@
           @foreach ($data  as $multimedia)
               <tr>
                   <td>{{$multimedia['url']}}</td>
-                  {{-- <td><img src="{{env('URL_SERVER_API_PUBLIC') . '/' . $multimedia['url']}}" style="width: 20%; border-radius: 15px;"><br></td> --}}
+                  <td><img src="{{env('URL_SERVER_API_PUBLIC') . '/' . $multimedia['url']}}" style="width: 20%; border-radius: 15px;"><br></td>
                   
                   <td><a href="{{ route('multimedia.view', $multimedia['id']) }}">Ver</a></td>
                  <td>

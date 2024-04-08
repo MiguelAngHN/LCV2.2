@@ -17,10 +17,10 @@
 </div><hr noshade="" class="HR1">
 <div class="contenedor-imagenes">
     @foreach ($boceto as $item)
-     <div class="imagen" onclick="seleccionarPlantilla('{{asset($item ['url'])}}')">
-        <img src="{{asset($item ['url'])}}" alt="{{$item ['nombre_boceto']}}">
+     <div class="imagen" onclick="seleccionarPlantilla('{{env('URL_SERVER_API_PUBLIC').'/'.$item ['url']}}')">
+        <img src="{{env('URL_SERVER_API_PUBLIC').'/'.$item ['url']}}" alt="{{$item ['nombre_boceto']}}">
         <button class="Pintar">Pintar</button>
-    </div>       
+    </div>
     @endforeach
 
     <div class="imagen">

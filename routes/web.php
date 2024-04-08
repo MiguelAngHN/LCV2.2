@@ -50,19 +50,6 @@ Route::get('/seccion/{idSeccion}', [SeccionController::class, 'view'])->name('se
 Route::post('/seccion/update', [SeccionController::class, 'update'])->name('seccion.update');
 Route::get('/seccion/delete/{id}', [SeccionController::class, 'delete'])->name('seccion.delete');
 
-
-Route::get('actividads', [ActividadController::class, 'index'])->name('actividads.index');
-Route::post('actividads', [ActividadController::class, 'store'])->name('actividads.store');
-Route::get('actividads/create', [ActividadController::class, 'create']);
-Route::delete('actividad/{actividad}', [ActividadController::class, 'destroy'])->name('actividad.destroy');
-Route::get('actividads/{actividad}', [ActividadController::class, 'show'])->name('actividad.show');
-
-Route::get('tipos', [TipoController::class, 'index'])->name('tipos.index');
-Route::post('tipos', [TipoController::class, 'store'])->name('tipos.store');
-Route::get('tipos/create', [TipoController::class, 'create']);
-Route::delete('tipo/{tipo}', [TipoController::class, 'destroy'])->name('tipo.destroy');
-Route::get('tipos/{tipo}', [TipoController::class, 'show'])->name('tipo.show');
-
 Route::get('multimedias', [MultimediaController::class, 'index'])->name('multimedias.index');
 Route::post('multimedias', [MultimediaController::class, 'store'])->name('multimedias.store');
 Route::get('multimedias/create', [MultimediaController::class, 'create'])->name('multimedias.create');
@@ -72,36 +59,15 @@ Route::get('/multimedia/{idMultimedia}', [MultimediaController::class, 'view'])-
 Route::post('/multimedia/update', [MultimediaController::class, 'update'])->name('multimedia.update');
 Route::get('/multimedia/delete/{id}', [MultimediaController::class, 'delete'])->name('multimedia.delete');
 
-
 View::share('seccions_temas', tema::all());
+Route::get('seccions-Números', function(){return view('seccions.numeros');})->name('seccions.numeros');
+Route::get('seccions-Letras y palabras', function(){return view('seccions.letrasypalabras');})->name('seccions.lyp');
+Route::get('seccions-Dibujo', function(){return view('seccions.dibujo');})->name('seccions.dibujo');
+Route::get('sobre nosotros', function () {return view('nosotros');})->name('nosotros');
 
-Route::get('seccions-Números', function(){
-    return view('seccions.numeros');
-})->name('seccions.numeros');
-
-Route::get('seccions-Letras y palabras', function(){
-    return view('seccions.letrasypalabras');
-})->name('seccions.lyp');
-
-Route::get('seccions-Dibujo', function(){
-    return view('seccions.dibujo');
-})->name('seccions.dibujo');
-
-Route::get('sobre nosotros', function () {
-    return view('nosotros');
-})->name('nosotros');
-
-Route::get('misión y visión', function () {
-    return view('misionYvision');
-})->name('misionYvision');
-
-Route::get('Contactenos', function () {
-    return view('contactenos');
-})->name('contactenos');
-
-Route::get('Perfil', function (){
-    return view('usuarios.home');
-})->name('perfil');
+Route::get('misión y visión', function () {return view('misionYvision');})->name('misionYvision');
+Route::get('Contactenos', function () {return view('contactenos');})->name('contactenos');
+Route::get('Perfil', function (){return view('usuarios.home');})->name('perfil');
 
 Route::get('bocetos', [BocetoController::class, 'index'])->name('bocetos.index');
 Route::post('bocetos', [BocetoController::class, 'store'])->name('bocetos.store');
@@ -112,7 +78,6 @@ Route::get('/boceto/{idBoceto}', [BocetoController::class, 'view'])->name('bocet
 Route::post('/boceto/update', [BocetoController::class, 'update'])->name('boceto.update');
 Route::get('/boceto/delete/{id}', [BocetoController::class, 'delete'])->name('boceto.delete');
 
-
 Route::get('login', [SessionController::class, 'create'])->name('login.index');
 Route::post('login', [SessionController::class, 'store'])->name('login.store');
 Route::get('login/destroy', [SessionController::class, 'destroy'])->name('login.destroy');
@@ -120,3 +85,7 @@ Route::get('login/destroy', [SessionController::class, 'destroy'])->name('login.
 Route::get('register', [RegisterController::class, 'create'])->name('register.index');
 Route::post('register', [RegisterController::class, 'store'])->name('register.store');
 Route::get('registers/', [RegisterController::class, 'show'])->name('register.show');
+
+
+Route::get('Escuchar', function (){return view('actividads.Escuchar');})->name('Escuchar');
+Route::get('PagContar', function (){return view('actividads.PagContar');})->name('PagContar');

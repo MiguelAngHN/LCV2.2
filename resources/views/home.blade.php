@@ -54,7 +54,6 @@
       </div>
     </div><br>
 
-
     <!-- ----------------------------------------------- -->
     <section class="Introduccion1">
       <img src="{{asset('assets/images/Goku-A.gif')}}" alt="Imagen de Goku">      
