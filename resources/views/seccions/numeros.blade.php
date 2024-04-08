@@ -3,11 +3,11 @@
 @section('title', 'Learn Cartoon / Secciones/Números')
 @section('nombreSeccion', 'Números')
 @section('ImgSeccion')
-<img src="{{asset('/storage/imagenes/1AStnmTWJ9nXluAEwVl114etipDYJPEYyisgNJ27.gif')}}">
+<img src="{{asset('assets/images/Ranita.gif')}}">
 @endsection
 
 @section('prsSeccion')
-<img src="{{asset('/storage/imagenes/XAhsSCpbxdAxO0IFErMee7GkEXCJAYL2IucZaTPd.gif')}}">
+<img src="{{asset('assets/images/ImgNumeros.gif')}}">
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
       <p>En este nivel puedes aprenderte el sonido y recordar los números, para
         familiarizarte con ellos.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/bepDI9I37w7OfXMg7tyJ7chvDQr9FnWTBCrruOEB.gif')}}">
+    <img src="{{asset('assets/images/Escuchar.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
@@ -28,7 +28,7 @@
       <p>Aprendete los números de manera ordenada, mejora su entendimiento, que puedan relacionar
         los números y las cantidades de manera cotidiana.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/2VJIiWMxh2qmFYZkBBTtdMabWG3LuYxTqEUm6RII.gif	')}}">
+    <img src="{{asset('assets/images/Contar.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
@@ -38,17 +38,17 @@
       <p>El desarrollo intelectual, logico y numerico es importante para tu vida.
       <br>Matematica basica para niños de 5 a 10 años.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/H5kxQAEN3FVmirwEdmUDBuGbvY32VkcniDnVQDVw.gif')}}">
+    <img src="{{asset('assets/images/Matematicas.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
-  @foreach($seccions_temas as $tema)
+  @foreach($tema as $item)
   <div class="Escuchar">
     <div class="contenidoEsc">
-      <h2>{{$tema->nombre_tema}}</h2>
-      <p>{{$tema->descripcion}}</p>
+      <h2>{{$item ['nombre_tema']}}</h2>
+      <p>{{$item ['descripcion']}}</p>
     </div>
-    <img src="{{asset($tema->url_imagen)}}">
+    <img src="{{asset($item ['url_imagen'])}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
@@ -62,4 +62,6 @@
         </div>
     </a>  
 </div>
+
+
 @endsection

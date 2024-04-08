@@ -8,7 +8,7 @@
     <h1 class="text-center">Misión y visión</h1>
     <div class="row align-items-center my-5">
       <div class="col-sm-6 col-md-6 text-start">
-        <img src="{{asset('/storage/imagenes/f9hE7zBN7hZxtmGjajIgfddHqZCbV0ILoHYb6PtX.gif')}}" class="img-fluid rounded mision2 my-4"/>
+        <img src="{{asset('assets/images/mision.gif')}}" class="img-fluid rounded mision2 my-4"/>
       </div>
       <div class="col-sm-6">
         <p>
@@ -35,7 +35,7 @@
         </p>
       </div>
       <div class="col-sm-6">
-        <img src="{{asset('/storage/imagenes/xTpsYI08Yf4fK0OdXsvIcgtFXjSl3iVF0vIocaFo.png')}}" class="img-fluid rounded mision1" />
+        <img src="{{asset('assets/images/vision.png')}}" class="img-fluid rounded mision1" />
       </div>
     </div>
   </div>

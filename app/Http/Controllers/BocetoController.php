@@ -42,8 +42,8 @@ class BocetoController extends Controller
     public function index(){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url.'/bocetos');
-        $data = $response->json();
-        return view('bocetos/listarboceto', compact('data'));
+        $boceto = $response->json();
+        return view('bocetos.index', compact('boceto'));
     }
 
      public function create(){
@@ -63,7 +63,7 @@ class BocetoController extends Controller
     public function delete($idBoceto){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::delete($url.'/bocetos/'.$idBoceto);
-        return redirect()->route('bocetos.index');
+        return redirect()->route('boceto.show');
     }
 
     public function view($idBoceto){
@@ -73,6 +73,13 @@ class BocetoController extends Controller
         return view('bocetos/view', compact('boceto'));
     }
 
+    public function show(){
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url.'/bocetos');
+        $data = $response->json();
+        return view('bocetos/listarboceto', compact('data'));
+    }
+
     public function update(Request $request){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
 
@@ -80,7 +87,7 @@ class BocetoController extends Controller
             'nombre_boceto' => $request->nombre_boceto,
             'url' => $request->url,
         ]);
-        return redirect()->route('bocetos.index');
+        return redirect()->route('boceto.show');
         
     }
 

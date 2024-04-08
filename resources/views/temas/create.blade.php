@@ -1,7 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
+
+@section('title', 'Learn Cartoon / Crear tema')
 
 @section('content')
-<div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg">
+
+<div class="block p-3 bg-white" style="font-family: Comic Sans MS;">
 
 <h1 class="text-3xl text-center font-bold">Crear tema</h1>
 <form action="{{route('temas.store')}}" method="POST" enctype="multipart/form-data" class="mt-4">
@@ -34,7 +37,8 @@
     </label> --}}
         
     <br><br>
-    <button type="submit" class="font-semibold hover:bg-indigo-700 py-3 px-4 rounded-md border-2 hover:bg-white">Enviar Formulario:</button>
+    <button type="submit" class="btn" style="background-color: #38b6ff;">Enviar Formulario:</button>
 </form>
+</div>
 
 @endsection

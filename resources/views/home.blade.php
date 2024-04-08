@@ -14,24 +14,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="{{asset('/storage/imagenes/P5PpPVl603JRfMhbqEBgVZqSH0f1Ftochpw6Vnnm.webp')}}"
-              class="d-block w-100"
-              alt="Banner 1"
-            />
+              src="{{asset('assets/images/Carrusel1.webp')}}"
+              class=" d-block w-100"
+              alt="Banner 1"/>
           </div>
           <div class="carousel-item">
             <img
-              src="{{asset('/storage/imagenes/EPJYnjfdho2F8pMP1PDrQSJ7TcPUzNinZCmsNFOi.webp')}}"
-              class="d-block w-100"
-              alt="Banner 2"
-            />
+            class="rounded d-block w-100"
+              src="{{asset('assets/images/vision.png')}}"
+              alt="Banner 2"/>
           </div>
           <div class="carousel-item">
             <img
-              src="{{asset('/storage/imagenes/mxpeHvG4O2I6h93e7Oi4ALH5iMyW0Tx4f4elhqOG.webp')}}"
-              class="d-block w-100"
-              alt="Banner 3"
-            />
+              src="{{asset('assets/images/Anime.gif')}}"
+              class="rounded d-block w-100"
+              alt="Banner 3"/>
           </div>
         </div>
         <button
@@ -60,7 +57,7 @@
 
     <!-- ----------------------------------------------- -->
     <section class="Introduccion1">
-      <img src="{{asset('/storage/imagenes/xG2r0aYnqjlZT9aAWbe7v1lLTXajTDxkDc07HoPx.gif')}}" alt="Imagen de Goku">      
+      <img src="{{asset('assets/images/Goku-A.gif')}}" alt="Imagen de Goku">      
       <p>
         Nos enfocamos en caracterisarnos por nuestro interes y compromiso al
         brindar nuestros servicios con secciones, cada una con niveles de
@@ -79,7 +76,7 @@
         habilidades y expandir su creatividad con los que evidencian con
         esta mundo tecnologico educativo desde cualquier lugar y momento.
       </p>
-      <img src="{{asset('/storage/imagenes/si6Q4H3uR7mpRS2dx4iwkTV0lCaLbqlYpwq1CGeA.gif')}}" alt="Imagen Educativa" />
+      <img src="{{asset('assets/images/Niños.gif')}}" alt="Imagen Educativa" />
       </section>
 
     <main class="ContenidoAdicional">

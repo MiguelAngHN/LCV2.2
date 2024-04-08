@@ -12,11 +12,12 @@
      <div class="col text-center">
       <!-- card de foto de perfil -->
       <div class="card border-0 " style="width: 18rem;">
-       {{-- <img src="https://th.bing.com/th/id/OIP.4tNpv-M4gDRxAYWlrqlsUQHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top rounded-circle" alt="foto de perfil"> --}}
-       <img src="{{asset('/storage/imagenes/ltTtQrnUDJI6bqMiSZf5qBcyXRexeBCyWhLdsqUo.webp')}}" class="card-img-top rounded-circle" alt="foto de perfil">
+       <img src="https://th.bing.com/th/id/OIP.4tNpv-M4gDRxAYWlrqlsUQHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top rounded-circle" alt="foto de perfil">
+       {{-- <img src="{{asset('/storage/imagenes/ltTtQrnUDJI6bqMiSZf5qBcyXRexeBCyWhLdsqUo.webp')}}" class="card-img-top rounded-circle" alt="foto de perfil"> --}}
        <div class="d-grid gap-2">
          <h5 class="card-title">Foto de perfil</h5>
-         <p>{{auth()->user()->nombre_usuario}}</p>
+         <p>User name</p>
+         {{-- <p>{{auth()->user()->nombre_usuario}}</p> --}}
          <a href="#" class="btn btn-primary m-2">Subir</a>
        </div>
      </div>

@@ -24,7 +24,7 @@
       <div class="col bg-white rounded-end">
 
         <div class="text-end d-none d-md-block">
-          <img src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" width="48" alt="Imagen logo contactenos" style="border-radius: 60px;">
+          <img src="{{asset('assets/images/Logo.webp')}}" width="48" alt="Imagen logo contactenos" style="border-radius: 60px;">
         </div>
         
         <h2 class="fw-bold text-center py-5">Contactenos</h2>
@@ -49,18 +49,13 @@
           </div>
           
           <div class="mb-4">
-            <textarea class="border border-info rounded w-100"
-            name="mensaje"
-            class="form-control"
-            placeholder="Introduzca su mensaje"></textarea>
+          <textarea class="border border-info rounded w-100" name="mensaje" class="form-control" placeholder="Introduzca su mensaje"></textarea>
           </div>
 
           <div class="d-grid">
             <button type="submit" class="btn" style="background-color: #38b6ff;">
               Enviar
             </button>
-          </div>
-          <div class="my-3">
           </div>
         </form>
       </div>

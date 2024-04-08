@@ -7,12 +7,12 @@
 @section('content')
 
 <div class="ImgDibujo">
-    <img src="{{{asset('/storage/imagenes/fYbk4dmfdwp4jzDmCcOnmjVUwwnSvHYZf9F6qWFb.gif')}}}" alt="Fondo de pintura">
+    <img src="{{{asset('assets/images/ImgSeccDibujo.gif')}}}" alt="Fondo de pintura">
 </div>
 <div class="InicioDibujo">
     <div class="InicioSeleccion">
         <h2> Boceto Seleccionado </h2>
-        <img id="select-template" src="{{asset('/storage/imagenes/FEyxJrLeygskXtG4SGIlO8t10KvSMZjNSjc9MVve.webp')}}" alt="Bocetos Seleccionado">
+        <img id="select-template" src="{{asset('assets/images/Logo.webp')}}" alt="Bocetos Seleccionado">
     </div>
     <div class="InicioInfo">
         <p>Aquí puedes empezar a divertirte dándole color en el lienzo, a tu

@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') - Web </title>
-    <link rel="icon" href="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}"/>
+    <link rel="icon" href="{{asset('assets/images/Logo.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/Login.css') }}">
-    <script
-      src="https://kit.fontawesome.com/5191364857.js"
-      crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5191364857.js" crossorigin="anonymous"></script>
 
     <!-- MenuNav / Carrousel----------- -->
     <link
@@ -27,7 +25,7 @@
   <body>
 
     <header class="header">
-        <a href="{{route('home')}}"><img class="logo" src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" alt="Logo Learn Cartoon"/></a>
+        <a href="{{route('home')}}"><img class="logo" src="{{asset('assets/images/Logo.webp')}}" alt="Logo Learn Cartoon"/></a>
         <div class="TituloLema">
         <h1 class="Titulo-Cabecera">Learn Cartoon</h1>
         <h2 class="Subtitulo-Cabecera">Pasos de hoy, caminos del mañana</h2>
@@ -67,12 +65,11 @@
                     <a class="dropdown-item" href="{{route('seccions.index')}}">Introducción</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.numeros')}}">Números</a>
+                    <a class="dropdown-item" href="{{route('temas.index')}}">Números</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.lyp')}}">Letras y palabras</a>
                   </li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
                   <li>
                     <a class="dropdown-item" href="{{route('bocetos.index')}}">Bocetos</a>
                   </li>
@@ -109,7 +106,7 @@
           <a class="nav-link p-2" aria-current="page" href="{{route('perfil')}}"><b>{{auth()->user()->nombre_usuario}}</b></a>
           <button class="btn bg-danger"><a class="text-decoration-none" href="{{route('login.destroy')}}">Cerrar sesión</a></button>
           @else
-            <button class="btn"><a class="text-decoration-none" href="{{route('register.index')}}">Registrarme</a></button>
+            <button class="btn"><a class="text-decoration-none" href="{{route('usuarios.create')}}">Registrarme</a></button>
             <button class="btn"><a class="text-decoration-none" href="{{route('login.index')}}">Iniciar Sesión</a></button>
           @endif          
         </div>

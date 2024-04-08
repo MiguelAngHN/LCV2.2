@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
 
-@section('title','Learn Cartoon / Bocetos')
+@section('title','Learn Cartoon / Listar bocetos')
 
 @section('content')
 
@@ -22,30 +22,15 @@
                   <td>{{$boceto ['nombre_boceto']}}</td>
                   <td>{{$boceto ['url']}}</td> 
                   
-                  <td><a href="{{ route('boceto.view', $boceto['id']) }}">Ver</a></td>
-                 <td>
-                  <a href="{{ route('boceto.delete', $boceto['id']) }}">Eliminar</a>
-                 </td>
-             
-                 
-                 
-                  {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
-                  
-    
+                  <td><button class="btn btn-primary">
+                    <a class="nav-link" href="{{ route('boceto.view', $boceto['id']) }}">Ver</a></td>
+                    <td><button class="btn btn-danger">
+                    <a class="nav-link" href="{{ route('boceto.delete', $boceto['id']) }}">Eliminar</a></button></td>
+  
               </tr>
           @endforeach
         </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>Id Pqrsd</th>
-                <th>esAnomina</th>
-                <th>TipoPQRSD</th>
-                <th>Estado</th>
-                <th>Creada</th>
-                <th>Responder</th>
-                <th>Detalle</th>
-            </tr>
-        </tfoot> -->
+
     </table>
     
     </div>

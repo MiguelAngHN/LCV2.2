@@ -23,7 +23,7 @@ class usuario extends Authenticatable
     return $this->hasMany('App\Models\actividad');
    }
 
-   protected $fillable = ['nombre_usuario', 'email', 'password', 'rol'];
+   protected $fillable = ['nombre_usuario', 'email', 'password'];
 
        /**
      * The attributes that should be hidden for serialization.

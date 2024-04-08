@@ -109,9 +109,10 @@
     flex-direction: column;
     margin: 10px;
     text-align: center;
-    background-color: #055584;
+    background-color: #0c669be2;
     flex-basis: 30%;
     flex-grow: 1;
+    border-radius: 15px;
   }
   .feature img {
     max-width: 100%;
@@ -126,9 +127,10 @@
   .feature2 {
     margin: 10px;
     text-align: center;
-    background-color: #055584;
+    background-color: #0c669be2;
     flex-basis: 30%;
     flex-grow: 1;
+    border-radius: 15px;
   }
   .feature2 img {
     max-width: 100%;

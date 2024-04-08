@@ -27,9 +27,7 @@ section.login {
     background-position: center center;
     background-size: cover;
 }
-/* .contenedor-contac{
-    margin:100px 0px ;
-    } */
+
 /* estilo favicon */
 link[rel="icon"] {
     border-radius: 50%;
@@ -41,7 +39,6 @@ link[rel="icon"] {
     border-bottom: 2px solid #e4e4e4;
 }
 .contenido_principal {
-    background-image: url("../img/paisaje.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,7 +67,7 @@ link[rel="icon"] {
     color: white;
 }
 .listado_oculto {
-    background-image: url("../img/card1.gif");
+    background-image: url("../images/card1.gif");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -99,7 +96,6 @@ a {
     text-decoration: none;
 }
 .lista_targeta {
-    /* text-decoration: none; */
     cursor: pointer;
     border-radius: 20px 0px 0px 20px;
     background-color: #7ed957;
@@ -109,6 +105,7 @@ a {
 .lista_targeta:hover {
     transform: scaleX(1.1) scaleY(1.1);
     transition: transform 0.3s ease-in-out;
+    margin-right: 15px;
 }
 
 /* --------------------login.css-------------- */
@@ -221,6 +218,6 @@ a {
     background-size: cover;
 }
 .contenedor_contactanos1 {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
 }

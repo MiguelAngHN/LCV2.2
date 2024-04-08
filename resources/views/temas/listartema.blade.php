@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
 
-@section('title','listar seccion')
+@section('title','Learn Cartoon / Listar tema')
 
 @section('content')
 
@@ -12,6 +12,8 @@
               <th>Descripción</th>
               <th>Url de Imagen</th>
               <th>Id seccion</th>
+              <th>Detalle</th>
+              <th>Eliminar</th>
               {{-- <th>Id multimedia</th> --}}
             </tr>
         </thead>
@@ -25,30 +27,14 @@
                 {{-- <td>{{$tema->multimedia_id}}</td> --}}
                   
                   
-                <td><a href="{{ route('tema.view', $tema['id']) }}">Ver</a></td>
-                <td>
-                 <a href="{{ route('tema.delete', $tema['id']) }}">Eliminar</a>
-                </td>
-             
-                 
-                 
-                  {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
-                  
+                <td><button class="btn btn-primary">
+                <a class="nav-link" href="{{ route('tema.view', $tema['id']) }}">Ver</a></button></td>
+                <td><button class="btn btn-danger">
+                <a class="nav-link" href="{{ route('tema.delete', $tema['id']) }}">Eliminar</a></button></td>
     
               </tr>
           @endforeach
         </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>Id Pqrsd</th>
-                <th>esAnomina</th>
-                <th>TipoPQRSD</th>
-                <th>Estado</th>
-                <th>Creada</th>
-                <th>Responder</th>
-                <th>Detalle</th>
-            </tr>
-        </tfoot> -->
     </table>
     
     </div>

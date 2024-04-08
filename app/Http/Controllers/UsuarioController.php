@@ -55,8 +55,8 @@ class UsuarioController extends Controller
     public function index(){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url.'/users');
-        $data = $response->json();
-        return view('usuarios/listarusuario', compact('data'));
+        $user = $response->json();
+        return view('usuarios/home', compact('user'));
     }
 
      public function create(){
@@ -70,7 +70,6 @@ class UsuarioController extends Controller
             'nombre_usuario' => $request->nombre_usuario,
             'email' => $request->email,
             'password' => $request->password,
-            'rol' => $request->rol,
         ]);
         return redirect()->route('usuarios.index');
     }
@@ -78,7 +77,7 @@ class UsuarioController extends Controller
     public function delete($idUser){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::delete($url.'/users/'.$idUser);
-        return redirect()->route('usuarios.index');
+        return redirect()->route('usuario.show');
     }
 
     public function view($idUser){
@@ -88,6 +87,13 @@ class UsuarioController extends Controller
         return view('usuarios/view', compact('user'));
     }
 
+    public function show(){
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url.'/users');
+        $data = $response->json();
+        return view('usuarios/listarusuario', compact('data'));
+    }
+
     public function update(Request $request){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
 
@@ -95,7 +101,6 @@ class UsuarioController extends Controller
             'nombre_usuario' => $request->nombre_usuario,
             'email' => $request->email,
             'password' => $request->password,
-            'rol' => $request->rol,
         ]);
         return redirect()->route('usuarios.index');
         

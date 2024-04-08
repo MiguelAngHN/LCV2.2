@@ -65,13 +65,6 @@
               @error('password')
               <p class="text-bg-danger p-3">{{$message}}*</p>
               @enderror
-              <div class="mb-4">
-                <label for="password" class="form-label">Rol:</label>
-                <input type="text" class="form-control" name="rol" required/>
-              </div>
-              @error('rol')
-              <p class="text-bg-danger p-3">{{$message}}*</p>
-              @enderror
   
               <div class="d-grid">
                 <button type="submit" class="btn" style="background-color: #38b6ff;">

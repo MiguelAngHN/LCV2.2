@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') - Web </title>
-    <link rel="icon" href="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}"/>
+    <link rel="icon" href="{{asset('assets/images/Logo.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/estilosSeccions.css') }}">
@@ -19,18 +19,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </head>
   <body>
 
     <header class="header">
-        <a href="{{route('home')}}"><img class="logo" src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" alt="Logo Learn Cartoon"/></a>
+        <a href="{{route('home')}}"><img class="logo" src="{{asset('assets/images/Logo.webp')}}" alt="Logo Learn Cartoon"/></a>
         <div class="TituloLema">
         <h1 class="Titulo-Cabecera">Learn Cartoon</h1>
         <h2 class="Subtitulo-Cabecera">Pasos de hoy, caminos del mañana</h2>
@@ -71,7 +69,7 @@
                     <a class="dropdown-item" href="{{route('seccions.index')}}">Introducción</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{{route('seccions.numeros')}}">Números</a>
+                    <a class="dropdown-item" href="{{route('temas.index')}}">Números</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="{{route('seccions.lyp')}}">Letras y palabras</a>

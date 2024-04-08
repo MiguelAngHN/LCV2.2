@@ -64,8 +64,8 @@ class SeccionController extends Controller
         public function index(){
             $url = env('URL_SERVER_API', 'http://127.0.0.1');
             $response = Http::get($url.'/seccions');
-            $data = $response->json();
-            return view('seccions/listarseccion', compact('data'));
+            $seccion = $response->json();
+            return view('seccions/home', compact('seccion'));
         }
     
          public function create(){
@@ -85,7 +85,7 @@ class SeccionController extends Controller
         public function delete($idSeccion){
             $url = env('URL_SERVER_API', 'http://127.0.0.1');
             $response = Http::delete($url.'/seccions/'.$idSeccion);
-            return redirect()->route('seccions.index');
+            return redirect()->route('seccion.show');
         }
     
         public function view($idSeccion){
@@ -94,6 +94,14 @@ class SeccionController extends Controller
             $seccion = $response->json();
             return view('seccions/view', compact('seccion'));
         }
+
+        public function show(){
+            $url = env('URL_SERVER_API', 'http://127.0.0.1');
+            $response = Http::get($url.'/seccions');
+            $data = $response->json();
+            return view('seccions/listarseccion', compact('data'));
+        }
+
     
         public function update(Request $request){
             $url = env('URL_SERVER_API', 'http://127.0.0.1');
@@ -102,7 +110,7 @@ class SeccionController extends Controller
                 'nombre_seccion' => $request->nombre_seccion,
                 'user_id' => $request->user_id,
             ]);
-            return redirect()->route('seccions.index');
+            return redirect()->route('seccion.show');
             
         }
     }

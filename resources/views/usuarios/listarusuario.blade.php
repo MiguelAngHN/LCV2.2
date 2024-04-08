@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
 
-@section('title','Learn Cartoon / Usuarios / Registros')
+@section('title','Learn Cartoon / Listar usuarios')
 
 @section('content')
 
@@ -12,7 +12,6 @@
                 <th>Nombre usuario</th>
                 <th>Correo</th>
                 <th>Contraseña</th>
-                <th>Rol</th>
                 <th>Detalle</th>
                 <th>Eliminar</th>
             </tr>
@@ -24,32 +23,16 @@
                   <td>{{$user ['nombre_usuario']}}</td>
                   <td>{{$user['email']}}</td>
                   <td>{{$user ['password']}}</td>
-                  <td>{{$user ['rol']}}</td>
                   
-                  <td><a href="{{ route('usuario.view', $user['id']) }}">Ver</a></td>
-                 <td>
-                  <a href="{{ route('usuario.delete', $user['id']) }}">Eliminar</a>
-                 </td>
-             
-                 
-                 
-                  {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
-                  
+                  <td><button class="btn btn-primary">
+                    <a class="nav-link" href="{{ route('usuario.view', $user['id']) }}">Ver</a></button></td>
+                 <td><button class="btn btn-danger">
+                  <a class="nav-link" href="{{ route('usuario.delete', $user['id']) }}">Eliminar</a></button></td>                  
     
               </tr>
           @endforeach
         </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>Id Pqrsd</th>
-                <th>esAnomina</th>
-                <th>TipoPQRSD</th>
-                <th>Estado</th>
-                <th>Creada</th>
-                <th>Responder</th>
-                <th>Detalle</th>
-            </tr>
-        </tfoot> -->
+
     </table>
     
     </div>

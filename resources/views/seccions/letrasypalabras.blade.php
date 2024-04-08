@@ -3,11 +3,11 @@
 @section('title', 'Learn Cartoon / Secciones/Letras y Palabras')
 @section('nombreSeccion', 'Letras y Palabras')
 @section('ImgSeccion')
-    <img src="{{asset('/storage/imagenes/RjWkK4qKP2MoyzDeuKg45F6Gq22R9f7OnbKl0XY2.gif')}}">
+    <img src="{{asset('assets/images/DadosABC.gif')}}">
 @endsection
 
 @section('prsSeccion')
-    <img src="{{asset('/storage/imagenes/sJIbPnpU0VjlTBXhRnB6veqpimviBVsNBnnDzIhv.gif')}}">
+    <img src="{{asset('assets/images/ImgSeccLYP.gif')}}">
 @endsection
 
 @section('content')
@@ -24,7 +24,7 @@
         <p>Empezemos por la facil escritura y lectura, la
             contrucción de palabras como también familiarizarse con ellas.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/bnVv6gSDlxzZkZpLNzmCggPIAv6iCGtc5uQ2Pu0C.gif')}}">
+    <img src="{{asset('assets/images/Vocales.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
 </div>
 <hr noshade="" class="HR5">
@@ -34,7 +34,7 @@
         <p>Aumenta el nivel guerrrero y tu aprendizaje tambien por eso agregamos nuevas
             letras para expandir tu memoria, vocabulario, comprensión.</p>
     </div>
-    <img src="{{asset('/storage/imagenes/Wx0tPYV85aV8iRDirUs7o83OSPxwJZC8hqyWeSaE.gif')}}">
+    <img src="{{asset('assets/images/Palbras.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
 </div>
 <hr noshade="" class="HR5">
@@ -45,21 +45,21 @@
             desarrollaras habilidades que siempre te serviran en tu vida.
         </p>
     </div>
-    <img src="{{asset('/storage/imagenes/AXY6Yewqexj61q8IHWfDZ0GwWQJb2fI10yqqNRtA.gif')}}">
+    <img src="{{asset('assets/images/Silabas y trisilabas.gif')}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
 </div>
 <hr noshade="" class="HR5">
-@foreach($seccions_temas as $tema)
+{{-- @foreach($tema as $item)
 <div class="Escuchar">
   <div class="contenidoEsc">
-    <h2>{{$tema->nombre_tema}}</h2>
-    <p>{{$tema->descripcion}}</p>
+    <h2>{{$item ['nombre_tema']}}</h2>
+    <p>{{$item ['descripcion']}}</p>
   </div>
-  <img src="{{asset($tema->url_imagen)}}">
+  <img src="{{asset($item ['url_imagen'])}}">
   <button class="boton"><a href=""> Empieza aquí </a></button>
 </div>
 <hr noshade="" class="HR5">
-@endforeach
+@endforeach --}}
 
 <div class="imagen" style="margin: 20px 0 0 0;">
   <h3>Crear tema</h3>

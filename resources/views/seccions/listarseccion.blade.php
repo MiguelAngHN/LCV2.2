@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
 
-@section('title','listar seccion')
+@section('title','Learn Cartoon / Listar seccion')
 
 @section('content')
 
@@ -25,25 +25,15 @@
                   <td>{{$usuario ['email']}}</td>
                   @endforeach --}}
                   
-                  <td><a href="{{ route('seccion.view', $seccion['id']) }}">Ver</a></td>
-                 <td><a href="{{ route('seccion.delete', $seccion['id']) }}">Eliminar</a></td>
+                  <td><button class="btn btn-primary">
+                    <a class="nav-link" href="{{ route('seccion.view', $seccion['id']) }}">Ver</a></button></td>
+                 <td><button class="btn btn-danger">
+                <a class="nav-link" href="{{ route('seccion.delete', $seccion['id']) }}">Eliminar</a></button></td>
                  
-                  {{-- <td><a href="{{route('curso.destroy',$curso->id)}}">Eliminar</a></td> --}}
-
               </tr>
           @endforeach
         </tbody>
-        <!-- <tfoot>
-            <tr>
-                <th>Id Pqrsd</th>
-                <th>esAnomina</th>
-                <th>TipoPQRSD</th>
-                <th>Estado</th>
-                <th>Creada</th>
-                <th>Responder</th>
-                <th>Detalle</th>
-            </tr>
-        </tfoot> -->
+
     </table>
     
     </div>

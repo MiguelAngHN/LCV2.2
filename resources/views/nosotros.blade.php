@@ -17,14 +17,14 @@
           </p>
         </div>
         <div class="col-sm-6 ">
-          <img src="{{asset('/storage/imagenes/fQv7yGhjRhomIDNEVd1k0D8McVQb7RJJ5cthRNuq.png')}}" class="img-fluid rounded mision1"/>
+          <img src="{{asset('assets/images/mision1.png')}}" class="img-fluid rounded mision1"/>
         </div>
       </div>
 
       <div class="row align-items-center my-5">
         <div class="col-sm-6 col-md-6 text-start">
           <!-- <h5>Beneficios de DentalTecnology:</h5> -->
-          <img src="{{asset('/storage/imagenes/UngXmHs7ASgInPJD7VM7UgKtQf3tFZTrdCxAKHTs.jpg')}}" class="img-fluid rounded mision2" />
+          <img src="{{asset('assets/images/imagen10.png')}}" class="img-fluid rounded mision2 p-2 m-3" />
         </div>
         <div class="col-sm-6 ">
           <p>
@@ -40,5 +40,6 @@
           </p>
         </div>
       </div>
+    </div>
 
 @endsection

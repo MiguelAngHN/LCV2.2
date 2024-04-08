@@ -52,9 +52,11 @@ class TemaController extends Controller
     public function index(){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url.'/temas');
-        $data = $response->json();
-        return view('temas/listartema', compact('data'));
+        $tema = $response->json();
+        
+        return view('seccions.numeros', compact('tema'));
     }
+
 
      public function create(){
          return view('temas.create');
@@ -75,7 +77,7 @@ class TemaController extends Controller
     public function delete($idTema){
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::delete($url.'/temas/'.$idTema);
-        return redirect()->route('temas.index');
+        return redirect()->route('tema.show');
     }
 
     public function view($idTema){
@@ -83,6 +85,13 @@ class TemaController extends Controller
         $response = Http::get($url.'/temas/'.$idTema);
         $tema = $response->json();
         return view('temas/view', compact('tema'));
+    }
+
+    public function show(){
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url.'/temas');
+        $data = $response->json();
+        return view('temas/listartema', compact('data'));
     }
 
     public function update(Request $request){
@@ -94,7 +103,7 @@ class TemaController extends Controller
             'url_imagen' => $request->url_imagen,
             'seccion_id' => $request->seccion_id,
         ]);
-        return redirect()->route('temas.index');
+        return redirect()->route('tema.show');
         
     }
 }

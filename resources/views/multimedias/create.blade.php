@@ -22,5 +22,5 @@
         
     <br><br><br>
     <button type="submit" class="btn m-3" style="background-color: #38b6ff;">Enviar Archivo</button>
-
+</form>
 @endsection

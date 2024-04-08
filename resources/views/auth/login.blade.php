@@ -63,7 +63,7 @@
               </div>
               <div class="my-3">
                 <span>No tienes cuenta? <a href="{{route('register.index')}}"> Registrate</a></span><br><br>
-                <span>Olvidaste tu contraseña? <a href="recuperar contraseña.html"> Recuperar contraseña</a></span>
+                {{-- <span>Olvidaste tu contraseña? <a href="recuperar contraseña.html"> Recuperar contraseña</a></span> --}}
               </div>
             </form>
 
