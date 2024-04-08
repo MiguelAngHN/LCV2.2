@@ -41,7 +41,7 @@
             
             <h2 class="fw-bold text-center py-5">Iniciar Sesión</h2>
             <!-- login -->
-            <form action="" method="POST">
+            <form action="{{route('usuarios.store')}}" method="POST">
               @csrf
               <div class="mb-4">
                 <label  class="form-label">Correo electronico</label>

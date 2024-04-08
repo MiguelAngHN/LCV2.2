@@ -29,7 +29,7 @@
         los números y las cantidades de manera cotidiana.</p>
     </div>
     <img src="{{asset('assets/images/Contar.gif')}}">
-    <button class="boton"><a href=""> Empieza aquí </a></button>
+    <button class="boton"><a href="{{route('PagContar')}}"> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
   <div class="Escuchar">
@@ -39,7 +39,7 @@
       <br>Matematica basica para niños de 5 a 10 años.</p>
     </div>
     <img src="{{asset('assets/images/Matematicas.gif')}}">
-    <button class="boton"><a href="{{route('Escuchar')}}"> Empieza aquí </a></button>
+    <button class="boton"><a href="{{route('PagOperaciones')}}"> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">
   @foreach($tema as $item)
@@ -48,7 +48,7 @@
       <h2>{{$item ['nombre_tema']}}</h2>
       <p>{{$item ['descripcion']}}</p>
     </div>
-    <img src="{{asset($item ['url_imagen'])}}">
+    <img src="{{env('URL_SERVER_API_PUBLIC').'/'.($item ['url_imagen'])}}">
     <button class="boton"><a href=""> Empieza aquí </a></button>
   </div>
   <hr noshade="" class="HR5">

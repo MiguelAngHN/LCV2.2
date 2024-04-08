@@ -58,8 +58,8 @@ class MultimediaController extends Controller
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/multimedias');
-        $data = $response->json();
-        return view('multimedias/listarmultimedia', compact('data'));
+        $multimedia = $response->json();
+        return view('multimedias/home', compact('multimedia'));
     }
 
     public function create()
@@ -91,7 +91,7 @@ class MultimediaController extends Controller
             // } else {
             //     return dd('error', 'No se pudo enviar el archivo multimedia a la API.');
             // }
-            return redirect()->to('/');
+            return redirect()->route('multimedias.index');
     } 
     
 
@@ -106,26 +106,11 @@ class MultimediaController extends Controller
     // }
 
 
-    //     public function store(Request $request)
-    // {
-    //     $url = env('URL_SERVER_API', 'http://127.0.0.1');
-
-    //     $response = Http::attach(
-    //         'file', // Nombre del campo de archivo esperado por la API
-    //         $request->file('file')->get(), // Obtén los datos binarios del archivo
-    //         $request->file('file')->getClientOriginalName() // Obtén el nombre original del archivo
-    //     )->post($url.'/multimedias');
-
-    //     return redirect()->route('multimedias.index');
-    // }
-
-
-
     public function delete($idMultimedia)
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::delete($url . '/multimedias/' . $idMultimedia);
-        return redirect()->route('multimedias.index');
+        return redirect()->route('multimedia.show');
     }
 
     public function view($idMultimedia)
@@ -136,6 +121,14 @@ class MultimediaController extends Controller
         return view('multimedias/view', compact('multimedia'));
     }
 
+    public function show()
+    {
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url . '/multimedias');
+        $data = $response->json();
+        return view('multimedias/listarmultimedia', compact('data'));
+    }
+
     public function update(Request $request)
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
@@ -143,6 +136,6 @@ class MultimediaController extends Controller
         $response = Http::put($url . '/multimedia/' . $request->id, [
             'file' => $request->file,
         ]);
-        return redirect()->route('multimedias.index');
+        return redirect()->route('multimedia.show');
     }
 }

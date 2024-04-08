@@ -16,9 +16,9 @@
     <input type="file" name="file" class="form-control w-50" accept="image/*">
   </div>
 
-   {{-- @error('file')
-       <span class="text-danger">Problema con el archivo</span>
-   @enderror --}}
+   @error('file')
+       <span class="text-danger m-3">Problema con el archivo</span>
+   @enderror
         
     <br><br><br>
     <button type="submit" class="btn m-3" style="background-color: #38b6ff;">Enviar Archivo</button>

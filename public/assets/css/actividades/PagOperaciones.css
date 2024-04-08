@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../../images/paisaje.webp);
+    background-size: cover;
+}
+.headerOperaciones {
+    font-family: Comic Sans MS;
+    background-color: rgb(203, 90, 203);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.introOperaciones{
+    float: left;
+    width: 50%;
+    height: 114vh;
+    background-color:rgba(255, 255, 255, 0.8);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.capa1Luffy{
+    width: 85%;
+    position: relative;
+    padding: 8%;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:linear-gradient(195deg, rgba(23, 193, 255, 0.547),white, rgba(44, 254, 75, 0.667));
+}
+.LuffyOperaciones{
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+}
+.imagenTexto{
+    position: absolute;
+    top: -6%;
+    left: 66%; 
+    max-width: 50%;
+    width: 50%;
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+.mainOperaciones{
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+    height: 114vh;
+    font-family: Comic Sans MS;
+}
+.operacion span{
+    font-size: 40px;
+    margin: 0 10px;
+    color: #63ff20;
+}
+.operacion{
+    text-align: center;
+    background-color: #38b6ff;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 0 15px;
+    margin: 30px 0 30px 15%;
+    border-radius: 50px;
+    box-shadow: 0 0 8px 1px #7ED957;
+}
+.operacion:hover{
+    animation: shake 0.5s ease-in-out infinite alternate;
+    box-shadow: 0 0 12px 6px #63ff20;
+}
+@keyframes shake {
+    0%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+.operacion a{
+    text-decoration: none;
+    color: #fff;
+}
+@media (max-width: 767px){
+    .introOperaciones{
+        background-color:rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: auto;
+        padding: 40px 15%;
+    }
+    .mainOperaciones{
+        width: 100%;
+        height: auto;
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .operacion{
+        margin: 30px 15px;
+  }
+}
+.clearOperaciones{
+    clear: both;
+}
+

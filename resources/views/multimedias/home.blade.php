@@ -13,12 +13,12 @@
 <div class="container">
     <div class="row">
 
-        @foreach ($multimedias as $multimedia)
-            <div class="col-4">
+        @foreach ($multimedia as $item)
+            <div class="col-4 p-1">
                 <div class="card">
-                    <img src="{{asset($multimedia->url)}}" class="img-fluid">
+                    <img src="{{env('URL_SERVER_API_PUBLIC').'/'.($item ['url'])}}" class="img-fluid">
                     <div class="card-footer">
-                        <a href="{{route('multimedia.show',$multimedia->id)}}" class="btn btn-primary">Detalles</a>
+                        <a href="{{route('multimedia.show',$item ['id'])}}" class="btn btn-primary">Detalles</a>
                         {{-- <form action="" class="d-inline">
                             <a href="{{route('multimedia.destroy')}}" class="btn btn-danger">Eliminar</a>
                         </form> --}}

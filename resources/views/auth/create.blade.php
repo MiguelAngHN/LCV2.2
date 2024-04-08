@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Cartoon / Registrarse</title>
+    <title>Registrarse</title>
     <link rel="icon" href="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/hmf.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/estilosIndex.css') }}">
@@ -21,7 +21,7 @@
 
   <div class="row align-items-center h-100 contenedor_bienevevido_login ">
     <div class="text-center text-primary " style="font-weight: 900px;">
-      <img src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" class="text-center logo_flotante" width="150px" alt="imagen_flotante_login">
+      <img src="{{asset('assets/images/Logo.webp')}}" class="text-center logo_flotante" width="150px" alt="imagen_flotante_login">
       <p class="bienvenido_border ">Registrarse</p>
       <p class="bienvenido text-md " >Registrarse</p>
       <!-- <p class="bienvenido">WELCOME</p> -->
@@ -36,13 +36,13 @@
           <div class="col bg-white rounded-end">
   
             <div class="text-end d-none d-md-block">
-              <img src="{{asset('/storage/imagenes/qUEkFthiybEZIoJ3bUZRB8g6NGy2t2CSyZx6oiY5.webp')}}" width="48" alt="imagen prueba" style="border-radius: 60px;">
+              <img src="{{asset('assets/images/Logo.webp')}}" width="48" alt="imagen prueba" style="border-radius: 60px;">
             </div>
             
             <h2 class="fw-bold text-center py-5">Registrarse en Learn Cartoon</h2>
             <!--Formulario login -->
 
-            <form action="{{route('register.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('usuarios.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
               <div class="mb-4">
                 <label for="email" class="form-label">Nombre de usuario:</label>

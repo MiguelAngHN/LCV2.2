@@ -87,7 +87,7 @@
                 
                 <section class="features">
                   <div class="feature">
-                    <a href="#"> <img src="{{asset('assets/images/dibujo1.gif')}}" alt="Juegos"></a>
+                    <a href="{{route('seccions.dibujo')}}"> <img src="{{asset('assets/images/dibujo1.gif')}}" alt="Juegos"></a>
                     <h3> Colorea y pinta. 🎨</h3>
                     <p>Disfruta de usar tu imaginación. Todos los colores disponibles al uso 
                         que quieras.
@@ -95,7 +95,7 @@
                   </div>
                   
                   <div class="feature">
-                    <a href="#"><img src="{{asset('assets/images/Bocetos1.gif')}}" alt="Actividades"></a>
+                    <a href="{{route('bocetos.index')}}"><img src="{{asset('assets/images/Bocetos1.gif')}}" alt="Actividades"></a>
                     <h3>Escoje a tu preferencia.</h3>
                     <p> Si deseas una guia no te preocupes tienes la ayuda necesaria para empezar 
                         tus pinturas.
@@ -103,7 +103,7 @@
                   </div>
                   
                   <div class="feature2">
-                    <a href="#"><img src="{{asset('/assets/images/Espacio.gif')}}" alt="Premios"></a>
+                    <a href="{{route('temas.index')}}"><img src="{{asset('/assets/images/Espacio.gif')}}" alt="Premios"></a>
                     <h3>Diviértete y aprende.</h3>
                     <p>Supera desafíos, recuerda que siempre hay seguir aprendiendo.</p>
                   </div>

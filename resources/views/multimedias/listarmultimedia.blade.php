@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.hmf')
 
-@section('title','Learn Cartoon / Multimedias')
+@section('title','Learn Cartoon / Listar multimedias')
 
 @section('content')
 
@@ -21,10 +21,10 @@
                   <td>{{$multimedia['url']}}</td>
                   <td><img src="{{env('URL_SERVER_API_PUBLIC') . '/' . $multimedia['url']}}" style="width: 20%; border-radius: 15px;"><br></td>
                   
-                  <td><a href="{{ route('multimedia.view', $multimedia['id']) }}">Ver</a></td>
-                 <td>
-                  <a href="{{ route('multimedia.delete', $multimedia['id']) }}">Eliminar</a>
-                 </td>
+                  <td><button class="btn btn-primary">
+                    <a class="nav-link" href="{{ route('multimedia.view', $multimedia['id']) }}">Ver</a></button></td>
+                 <td> <button class="btn btn-danger">
+                  <a class="nav-link" href="{{ route('multimedia.delete', $multimedia['id']) }}">Eliminar</a></button></td>
               </tr>
           @endforeach
         </tbody>

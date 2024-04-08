@@ -56,7 +56,7 @@ class UsuarioController extends Controller
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url.'/users');
         $user = $response->json();
-        return view('usuarios/home', compact('user'));
+        return view('home', compact('user'));
     }
 
      public function create(){

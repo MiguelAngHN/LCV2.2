@@ -54,7 +54,7 @@ Route::get('multimedias', [MultimediaController::class, 'index'])->name('multime
 Route::post('multimedias', [MultimediaController::class, 'store'])->name('multimedias.store');
 Route::get('multimedias/create', [MultimediaController::class, 'create'])->name('multimedias.create');
 Route::delete('multimedia/{multimedia}', [MultimediaController::class, 'destroy'])->name('multimedia.destroy');
-Route::get('multimedias/{multimedia}', [MultimediaController::class, 'show'])->name('multimedia.show');
+Route::get('Listamultimedias', [MultimediaController::class, 'show'])->name('multimedia.show');
 Route::get('/multimedia/{idMultimedia}', [MultimediaController::class, 'view'])->name('multimedia.view');
 Route::post('/multimedia/update', [MultimediaController::class, 'update'])->name('multimedia.update');
 Route::get('/multimedia/delete/{id}', [MultimediaController::class, 'delete'])->name('multimedia.delete');
@@ -89,3 +89,9 @@ Route::get('registers/', [RegisterController::class, 'show'])->name('register.sh
 
 Route::get('Escuchar', function (){return view('actividads.Escuchar');})->name('Escuchar');
 Route::get('PagContar', function (){return view('actividads.PagContar');})->name('PagContar');
+Route::get('ActContar', function (){return view('actividads.ActContar');})->name('ActContar');
+Route::get('PagOperaciones', function (){return view('actividads.PagOperaciones');})->name('PagOperaciones');
+Route::get('JuegoSuma', function (){return view('actividads.Suma');})->name('Suma');
+Route::get('JuegoResta', function (){return view('actividads.Resta');})->name('Resta');
+Route::get('JuegoMultiplicacion', function (){return view('actividads.Multiplicar');})->name('Multiplicar');
+Route::get('JuegoDivision', function (){return view('actividads.Dividir');})->name('Dividir');

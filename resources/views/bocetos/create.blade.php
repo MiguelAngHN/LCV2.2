@@ -18,7 +18,7 @@
     </label>
     <br>
     <label>
-        url:
+        Url de multimedia:
         <br>
         <input type="text" name="url" class=" border border-gray-200 rounded-md bg-gray-200 w-full tex-lg placeholder-gray-900 p-2 my-2 focus:bg-white">
     </label><br>

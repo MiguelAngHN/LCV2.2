@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../../Images/paisaje.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.headerContar {
+    font-family: Comic Sans MS;
+    background-color: rgb(36, 212, 186);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.introContar{
+    background-color:rgba(255, 255, 255, 0.8);
+    font-family: Comic Sans MS;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.capa1Nezuko{
+    width: 50%;
+    padding: 6%;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(60deg, rgb(212, 150, 212),white, white, rgb(221, 49, 49));
+}
+.introContar img{
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+    animation: floatAnimation 4s ease-in-out infinite alternate;
+}
+.descripcionContar{
+    width: 50%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0 0 6px 1px rgba(36, 212, 186, 0.6);
+    padding: 3%;
+    margin: 15px;
+    border-radius: 5%;
+}
+.descripcionContar a{
+    font-family: Comic Sans MS;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+.btnContar{
+    background-color: #7ED957;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+.btnContar:hover{
+    background-color: #6ac942;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+@media (max-width: 767px){
+    .introContar{
+        flex-wrap: wrap;
+    }
+    .descripcionContar{
+        width: 80%;
+    }
+}
